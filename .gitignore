@@ -2,3 +2,4 @@ SEED.zip
 .venv
 SEED
 processed
+__pycache__
