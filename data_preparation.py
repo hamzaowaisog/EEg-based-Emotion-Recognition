@@ -31,11 +31,21 @@ def load_preprocessed_data (preprocessed_dir):
             eeg_data[subject_id][emotion_label] = []
         eeg_data[subject_id][emotion_label].append(trial_data)
         
+    print(f"Loaded data for {len(eeg_data)} subjects")
+    
+    for subject, trial_data in eeg_data.items():
+        for label, trial_list in trial_data.items():
+            for trial in trial_list:
+                if not isinstance (trial, np.ndarray):
+                    print(f"Invalid trial data for subject {subject}, label {label}")
+        
     return eeg_data
 
 
 def enumerate_pairs(eeg_data):
     ## Enumerate all possible pairs of emotions
     emotions = list(eeg_data.keys())
+    print(f"Enumerating pairs for {len(emotions)} subjects")
     return list(combinations(emotions, 2))
+
 

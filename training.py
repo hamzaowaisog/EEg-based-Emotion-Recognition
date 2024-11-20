@@ -2,6 +2,7 @@ import torch
 import random
 from model import CLISAEncoder, Projector, contrastive_loss
 from data_preparation import enumerate_pairs
+import numpy as np
 
 def train_clisa(eeg_data, epochs, batch_size, learning_rate, device):
     """Train the CLISA model using contrastive learning."""
@@ -44,8 +45,16 @@ def train_clisa(eeg_data, epochs, batch_size, learning_rate, device):
                 batch_loss = 0
 
                 for (x_i, x_j) in batch_pairs:
-                    x_i = torch.tensor(x_i, dtype=torch.float32).unsqueeze(0).to(device)
-                    x_j = torch.tensor(x_j, dtype=torch.float32).unsqueeze(0).to(device)
+                    
+                    x_i = np.asarray(x_i, dtype=np.float64)
+                    x_j = np.asarray(x_j, dtype=np.float64)
+                    
+                    x_i = x_i.flatten()
+                    x_j = x_j.flatten()
+
+                    
+                    x_i = torch.tensor(x_i, dtype=torch.float64).unsqueeze(0).to(device)
+                    x_j = torch.tensor(x_j, dtype=torch.float64).unsqueeze(0).to(device)
 
                     z_i = projector(encoder(x_i))
                     z_j = projector(encoder(x_j))
