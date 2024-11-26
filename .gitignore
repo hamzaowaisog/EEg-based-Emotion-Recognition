@@ -6,3 +6,7 @@ __pycache__
 Preprocess
 fieldtrip-master
 Preprocessed_EEG
+.torcheeg
+
+processed_eeg_data
+processed_seed_data
