@@ -10,3 +10,7 @@ Preprocessed_EEG
 
 processed_eeg_data
 processed_seed_data
+runs
+
+preprocessed_seed_data.zip
+processed_eeg_data.zip
