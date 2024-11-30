@@ -1,6 +1,6 @@
 # Project: EEG-Based Emotion Recognition Using Quantum Classification
 ## Overview
-This project focuses on classifying human emotions based on EEG (Electroencephalogram) signals using Quantum Classification methods. By leveraging quantum computing, the model aims to handle complex patterns and feature interactions in EEG data, leading to potential advancements in emotion recognition systems.
+This project focuses on classifying human emotions based on EEG (Electroencephalogram) signals using Quantum Classification methods. By leveraging quantum computing, the model aims to handle complex patterns and feature interactions in EEG data, leading to potential advancements in emotion recognition systems. 73 % accuracy
 
 # Structure and Workflow
 
