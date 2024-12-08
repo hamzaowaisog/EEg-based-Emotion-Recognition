@@ -16,3 +16,4 @@ preprocessed_seed_data.zip
 processed_eeg_data.zip
 Version 2_Hamza/Data
 
+*.pkl
