@@ -8,11 +8,26 @@ fieldtrip-master
 Preprocessed_EEG
 .torcheeg
 
+<<<<<<< HEAD
 processed_eeg_data
 processed_seed_data
 runs
+=======
+auto_denoised_ica
+cleaned_data_ica
+denoised_data_ica
+
+processed_eeg_data
+processed_seed_data
+runs
+Version_Aheed\fyp\denoising_ica\denoised_vs_original.fig
+>>>>>>> 7e20bc0bbf0c89a021c1fd9980126208789d940f
 
 preprocessed_seed_data.zip
 processed_eeg_data.zip
 Version 2_Hamza/Data
 
+<<<<<<< HEAD
+=======
+*.pkl
+>>>>>>> 7e20bc0bbf0c89a021c1fd9980126208789d940f
