@@ -8,6 +8,10 @@ fieldtrip-master
 Preprocessed_EEG
 .torcheeg
 
+auto_denoised_ica
+cleaned_data_ica
+denoised_data_ica
+
 processed_eeg_data
 processed_seed_data
 runs
