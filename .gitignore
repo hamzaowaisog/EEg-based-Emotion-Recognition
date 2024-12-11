@@ -23,5 +23,9 @@ cleaned_data
 preprocessed_seed_data.zip
 processed_eeg_data.zip
 Version 2_Hamza/Data
-
+Version_Aheed\fyp\denoising\runs\contrastive_training
+contrastive_pairs
+contrastive_pairs_old
+denoised_data
+mock_contrastive_pairs
 *.pkl
