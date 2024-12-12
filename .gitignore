@@ -14,7 +14,7 @@ runs
 auto_denoised_ica
 cleaned_data_ica
 denoised_data_ica
-
+4channelmodel
 processed_eeg_data
 processed_seed_data
 runs
