@@ -29,3 +29,7 @@ FYP_1/denoised_data
 FYP_1/mock_contrastive_pairs
 FYP_1/*.pkl
 FYP_1/Version_Aheed/fyp/fyp2
+.env
+FYP_2/Aheed/Pytorch_Retinaface-master.zip
+FYP_2/Aheed/Pytorch_Retinaface-master
+FYP_2/Aheed/face.jpg
