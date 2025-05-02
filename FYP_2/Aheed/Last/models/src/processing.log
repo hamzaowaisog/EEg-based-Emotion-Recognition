@@ -1,0 +1,85 @@
+2025-05-01 20:01:06,848 - INFO - Using device: cuda
+2025-05-01 20:01:08,633 - INFO - ViT model loaded successfully
+2025-05-01 20:01:08,649 - INFO - Loaded ratings for 32 participants
+2025-05-01 20:01:08,650 - INFO - Processing subject 1
+2025-05-01 20:01:08,651 - INFO - Processing subject 2
+2025-05-01 20:01:08,651 - INFO - Processing subject 3
+2025-05-01 20:01:08,652 - INFO - Processing subject 4
+2025-05-01 20:01:09,082 - WARNING - Unexpected EEG data dimensions in s04.dat: (40, 40, 8064)
+2025-05-01 20:01:09,163 - WARNING - Unexpected EEG data dimensions in s03.dat: (40, 40, 8064)
+2025-05-01 20:01:09,295 - WARNING - Unexpected EEG data dimensions in s02.dat: (40, 40, 8064)
+2025-05-01 20:01:09,398 - WARNING - Unexpected EEG data dimensions in s01.dat: (40, 40, 8064)
+2025-05-01 20:07:25,584 - INFO - Using device: cuda
+2025-05-01 20:07:26,678 - INFO - ViT model loaded successfully
+2025-05-01 20:07:26,681 - INFO - Loaded ratings for 32 participants
+2025-05-01 20:07:26,683 - INFO - Processing subject 1
+2025-05-01 20:07:26,684 - INFO - Processing subject 2
+2025-05-01 20:07:26,684 - INFO - Processing subject 3
+2025-05-01 20:07:26,685 - INFO - Processing subject 4
+2025-05-01 20:23:10,370 - WARNING - Video file not found: C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\raw\videos\s03\s03_trial40.avi
+2025-05-01 20:23:10,385 - INFO - Subject 3: 40/40 trials processed successfully
+2025-05-01 20:23:10,393 - INFO - Processing subject 5
+2025-05-01 20:23:34,941 - INFO - Subject 2: 40/40 trials processed successfully
+2025-05-01 20:23:34,949 - INFO - Processing subject 6
+2025-05-01 20:23:55,525 - INFO - Subject 1: 40/40 trials processed successfully
+2025-05-01 20:23:55,534 - INFO - Processing subject 7
+2025-05-01 20:24:02,500 - INFO - Subject 4: 40/40 trials processed successfully
+2025-05-01 20:24:02,508 - INFO - Processing subject 8
+2025-05-01 20:39:00,420 - WARNING - Video file not found: C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\raw\videos\s05\s05_trial40.avi
+2025-05-01 20:39:00,432 - INFO - Subject 5: 40/40 trials processed successfully
+2025-05-01 20:39:00,442 - INFO - Processing subject 9
+2025-05-01 20:39:35,187 - INFO - Subject 8: 40/40 trials processed successfully
+2025-05-01 20:39:35,197 - INFO - Processing subject 10
+2025-05-01 20:40:00,686 - INFO - Subject 7: 40/40 trials processed successfully
+2025-05-01 20:40:00,728 - INFO - Processing subject 11
+2025-05-01 20:40:24,035 - INFO - Subject 6: 40/40 trials processed successfully
+2025-05-01 20:40:24,043 - INFO - Processing subject 12
+2025-05-01 20:54:36,255 - WARNING - Video file not found: C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\raw\videos\s11\s11_trial38.avi
+2025-05-01 20:54:37,491 - WARNING - Video file not found: C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\raw\videos\s11\s11_trial39.avi
+2025-05-01 20:54:38,304 - WARNING - Video file not found: C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\raw\videos\s11\s11_trial40.avi
+2025-05-01 20:54:38,340 - INFO - Subject 11: 40/40 trials processed successfully
+2025-05-01 20:54:38,371 - INFO - Processing subject 13
+2025-05-01 20:54:43,499 - INFO - Subject 9: 40/40 trials processed successfully
+2025-05-01 20:54:43,530 - INFO - Processing subject 14
+2025-05-01 20:55:26,086 - INFO - Subject 10: 40/40 trials processed successfully
+2025-05-01 20:55:26,093 - INFO - Processing subject 15
+2025-05-01 20:57:35,496 - INFO - Subject 12: 40/40 trials processed successfully
+2025-05-01 20:57:35,504 - INFO - Processing subject 16
+2025-05-01 21:10:05,580 - INFO - Subject 13: 40/40 trials processed successfully
+2025-05-01 21:10:05,589 - INFO - Processing subject 17
+2025-05-01 21:10:18,007 - WARNING - Video file not found: C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\raw\videos\s14\s14_trial40.avi
+2025-05-01 21:10:18,078 - INFO - Subject 14: 40/40 trials processed successfully
+2025-05-01 21:10:18,129 - INFO - Processing subject 18
+2025-05-01 21:11:41,671 - INFO - Subject 15: 40/40 trials processed successfully
+2025-05-01 21:11:41,679 - INFO - Processing subject 19
+2025-05-01 21:13:58,635 - INFO - Subject 16: 40/40 trials processed successfully
+2025-05-01 21:13:58,643 - INFO - Processing subject 20
+2025-05-01 21:26:19,389 - INFO - Subject 18: 40/40 trials processed successfully
+2025-05-01 21:26:19,398 - INFO - Processing subject 21
+2025-05-01 21:26:42,768 - INFO - Subject 17: 40/40 trials processed successfully
+2025-05-01 21:26:42,772 - INFO - Processing subject 22
+2025-05-01 21:28:15,695 - INFO - Subject 19: 40/40 trials processed successfully
+2025-05-01 21:28:15,705 - INFO - Processing subject 23
+2025-05-01 21:28:27,297 - INFO - Subject 23: 40/40 trials processed successfully
+2025-05-01 21:28:27,305 - INFO - Processing subject 24
+2025-05-01 21:28:37,442 - INFO - Subject 24: 40/40 trials processed successfully
+2025-05-01 21:28:37,447 - INFO - Processing subject 25
+2025-05-01 21:28:48,439 - INFO - Subject 25: 40/40 trials processed successfully
+2025-05-01 21:28:48,467 - INFO - Processing subject 26
+2025-05-01 21:28:58,837 - INFO - Subject 26: 40/40 trials processed successfully
+2025-05-01 21:28:58,844 - INFO - Processing subject 27
+2025-05-01 21:29:10,265 - INFO - Subject 27: 40/40 trials processed successfully
+2025-05-01 21:29:10,271 - INFO - Processing subject 28
+2025-05-01 21:29:21,249 - INFO - Subject 28: 40/40 trials processed successfully
+2025-05-01 21:29:21,285 - INFO - Processing subject 29
+2025-05-01 21:29:32,826 - INFO - Subject 29: 40/40 trials processed successfully
+2025-05-01 21:29:32,833 - INFO - Processing subject 30
+2025-05-01 21:29:43,799 - INFO - Subject 30: 40/40 trials processed successfully
+2025-05-01 21:29:43,804 - INFO - Processing subject 31
+2025-05-01 21:29:55,204 - INFO - Subject 31: 40/40 trials processed successfully
+2025-05-01 21:29:55,210 - INFO - Processing subject 32
+2025-05-01 21:30:05,034 - INFO - Subject 32: 40/40 trials processed successfully
+2025-05-01 21:30:25,555 - INFO - Subject 20: 40/40 trials processed successfully
+2025-05-01 21:37:20,897 - INFO - Subject 21: 40/40 trials processed successfully
+2025-05-01 21:37:28,564 - INFO - Subject 22: 40/40 trials processed successfully
+2025-05-01 21:37:28,571 - INFO - Processing complete. 32/32 subjects processed successfully.
