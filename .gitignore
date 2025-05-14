@@ -60,3 +60,5 @@ FYP_2/Aheed/Last/metadata_csv/participant_ratings.csv
 FYP_2/Aheed/Last/metadata_csv/video_list.csv
 
 FYP_2/Hamza/.torcheeg
+FYP_2/Hamza/full_dataset_data.npy
+FYP_2/Hamza/full_dataset_labels.npy
