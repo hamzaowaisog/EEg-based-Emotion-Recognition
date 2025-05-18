@@ -262,6 +262,3 @@ This project is licensed under the Aheed License - see the Aheed file for detail
 </div>
 
 
-<div align="center">
-  <img src="FYP_2/Aheed/Documentation/tsne_comparison_report_style.png" alt="tSNE Visualization" width="600"/>
-</div> 
