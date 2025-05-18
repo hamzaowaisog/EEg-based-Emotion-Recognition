@@ -253,13 +253,14 @@ python tsnevisual.py
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Aheed License - see the Aheed file for details.
 
 ---
 
 <div align="center">
-  <i>Made with 🧠 at FAST-National University of Computer & Emerging Sciences, Karachi</i>
+  <i>Made with Dr. Kamran Ali at FAST-National University of Computer & Emerging Sciences, Karachi</i>
 </div>
+
 
 <div align="center">
   <img src="FYP_2/Aheed/Documentation/tsne_comparison_report_style.png" alt="tSNE Visualization" width="600"/>
