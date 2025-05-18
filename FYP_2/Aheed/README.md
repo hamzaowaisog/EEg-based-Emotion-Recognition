@@ -13,11 +13,14 @@ The DEAP EEG+Face Multimodal Fusion approach implements a novel framework that:
 - Demonstrates significant improvements over single-modality approaches
 
 ## Results
-This approach achieved impressive performance metrics:
-- **Valence Classification Accuracy**: 83.7%
-- **Arousal Classification Accuracy**: 81.2%
-- **F1-Score**: 0.82
-- **UAR (Unweighted Average Recall)**: 0.81
+This approach achieved the following performance metrics:
+- **Valence Classification Accuracy**: 
+  - Subject-Dependent: 68.37%
+  - Subject-Independent: 54.55%
+- **F1-Score**: 
+  - Subject-Dependent: 63.02%
+  - Subject-Independent: 53.87%
+- **Key Finding**: The multimodal fusion provided complementary information, improving over EEG-only baseline approaches
 
 ## Directory Structure
 - **Face_Model/**: Implementation of facial expression-based emotion recognition models

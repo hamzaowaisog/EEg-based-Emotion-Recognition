@@ -84,9 +84,10 @@ Combines EEG signals with facial expressions to create a robust emotion recognit
 - Cross-modal contrastive learning to align representations
 
 **Results:**
-- Valence Classification Accuracy: 83.7%
-- Arousal Classification Accuracy: 81.2%
-- Significant improvement over single-modality approaches
+- Valence Classification Accuracy: 68.37% (subject-dependent), 54.55% (subject-independent)
+- Arousal Classification: Significant improvement over baseline methods
+- F1-Score: 63.02% (subject-dependent), 53.87% (subject-independent)
+- Multimodal fusion provided complementary information, improving over EEG-only approaches
 
 ### 2️⃣ Multi-Source Contrastive Learning (Hamza)
 
@@ -98,9 +99,10 @@ Enhances cross-subject generalization through dynamic domain adaptation and nois
 - Dual-stage contrastive learning framework
 
 **Results:**
-- DEAP Dataset: 76.5% average accuracy (3-class)
-- SEED Dataset: 85.3% average accuracy (3-class)
-- 11.7% improvement over baseline methods
+- DEAP Dataset: 85.4% (subject-dependent), 68.7% (subject-independent) accuracy
+- Macro F1-score: 83.8% (subject-dependent), 63.2% (subject-independent)
+- UAR: 82.7% (subject-dependent), 61.8% (subject-independent)
+- 10.5% improvement over baseline methods
 
 ### 3️⃣ SEED EEG-only Multi-class Classification (Haseeb)
 
@@ -112,9 +114,10 @@ Advanced noise-robust learning with Generalized Cross-Entropy loss for improved 
 - Enhanced subject-invariant feature extraction
 
 **Results:**
-- SEED Dataset: 85.3% average accuracy (3-class)
-- 12.3% improvement over baseline methods
-- Improved robustness to label noise
+- SEED Dataset: 86.48% average accuracy (3-class)
+- Weighted F1-score: 86.56%
+- Combined Prototype Contrastive and MMD loss significantly outperformed other loss functions
+- Comparable to CLISA, with better handling of noisy labels
 
 ### 4️⃣ Quantum Machine Learning Approach (FYP-1)
 
@@ -163,12 +166,12 @@ python tsnevisual.py
 
 ## 📊 Performance
 
-| Approach | Dataset | Accuracy | F1-Score | UAR |
-|----------|---------|----------|----------|-----|
-| CLISA (FYP-1) | SEED | 73.8% | 0.72 | 0.71 |
-| MSCL (FYP-2) | SEED | 85.3% | 0.84 | 0.83 |
-| EEG+Face (FYP-2) | DEAP | 83.7% | 0.82 | 0.81 |
-| Quantum (FYP-1) | DEAP | 68.5% | 0.67 | 0.66 |
+| Approach | Dataset | Subject-Dependent Accuracy | Subject-Independent Accuracy | F1-Score | UAR |
+|----------|---------|----------|----------|----------|-----|
+| CLISA (FYP-1) | SEED | N/A | 85.4% | N/A | N/A |
+| MSCL (FYP-2) | SEED | N/A | 86.48% | 86.56% | N/A |
+| EEG+Face (FYP-2) | DEAP | 68.37% | 54.55% | 53.87% | N/A |
+| DEAP EEG-only (FYP-2) | DEAP | 85.4% | 68.7% | 63.2% | 61.8% |
 
 ## 👥 Team
 
