@@ -259,4 +259,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 <div align="center">
   <i>Made with 🧠 at FAST-National University of Computer & Emerging Sciences, Karachi</i>
+</div>
+
+<div align="center">
+  <img src="FYP_2/Aheed/Documentation/tsne_comparison_report_style.png" alt="tSNE Visualization" width="600"/>
 </div> 
