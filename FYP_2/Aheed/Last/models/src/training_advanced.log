@@ -1,0 +1,16 @@
+2025-05-02 13:03:33,011 - INFO - Using device: cuda
+2025-05-02 13:03:33,011 - INFO - Loading dataset...
+2025-05-02 13:03:33,406 - INFO - Loaded 1280 valid samples from C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\processed
+2025-05-02 13:03:33,406 - INFO - Class distribution: {0: 556, 1: 724}
+2025-05-02 13:03:33,406 - INFO - Class weights: {0: 1.1510791366906474, 1: 0.8839779005524862}
+2025-05-02 13:03:33,406 - INFO - Subject distribution: 32 subjects, min=40, max=40
+2025-05-02 13:03:34,127 - INFO - Class distribution: {0: 724, 1: 724}
+2025-05-02 13:03:34,127 - INFO - Class weights: {0: 1.0, 1: 1.0}
+2025-05-02 13:03:34,129 - INFO - Subject distribution: 32 subjects, min=41, max=50
+2025-05-02 13:03:34,132 - INFO - Creating dataset splits...
+2025-05-02 13:03:34,135 - INFO - Train class distribution: Counter({1: 463, 0: 439})
+2025-05-02 13:03:34,135 - INFO - Val class distribution: Counter({0: 107, 1: 98})
+2025-05-02 13:03:34,135 - INFO - Test class distribution: Counter({0: 104, 1: 101})
+2025-05-02 13:03:34,135 - INFO - Initializing model...
+2025-05-02 13:03:35,518 - INFO - Starting training...
+2025-05-02 13:03:35,520 - INFO - Training with 902 samples, validating with 205 samples

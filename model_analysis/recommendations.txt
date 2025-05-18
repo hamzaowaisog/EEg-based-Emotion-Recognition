@@ -1,0 +1,15 @@
+# Model Improvement Recommendations
+
+## 1. Low Performance
+**Issue**: Model accuracy is below 60%
+
+**Recommendation**: Consider more advanced architectures, better feature extraction, or ensemble methods
+
+## General Recommendations
+
+1. **Data Augmentation**: Implement more advanced EEG-specific augmentation techniques
+2. **Feature Engineering**: Extract more informative features from raw EEG data
+3. **Cross-Subject Adaptation**: Improve domain adaptation techniques for better cross-subject generalization
+4. **Ensemble Methods**: Combine multiple models for better performance
+5. **Hyperparameter Tuning**: Systematically optimize hyperparameters
+6. **Advanced Architectures**: Explore state-of-the-art architectures like Graph Neural Networks for EEG

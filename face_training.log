@@ -1,0 +1,1146 @@
+2025-05-12 11:07:42,696 - INFO - Using device: cuda
+2025-05-12 11:07:49,877 - INFO - Loaded 880 samples with face data
+2025-05-12 11:07:49,877 - INFO - Class distribution: {0: 400, 1: 480}
+2025-05-12 11:07:49,877 - INFO - Class weights: {0: 1.1, 1: 0.9166666666666666}
+2025-05-12 11:07:49,877 - INFO - Balanced classes: 880 -> 960 samples
+2025-05-12 11:07:49,877 - INFO - Class distribution: {0: 480, 1: 480}
+2025-05-12 11:07:49,877 - INFO - Class weights: {0: 1.0, 1: 1.0}
+2025-05-12 11:07:49,885 - INFO - Train split: 652 samples, 15 subjects
+2025-05-12 11:07:49,885 - INFO - Val split: 133 samples, 3 subjects
+2025-05-12 11:07:49,888 - INFO - Test split: 175 samples, 4 subjects
+2025-05-12 11:07:49,888 - INFO - Train subjects: [3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 17, 18, 19, 20, 22]
+2025-05-12 11:07:49,889 - INFO - Val subjects: [2, 16, 21]
+2025-05-12 11:07:49,889 - INFO - Test subjects: [1, 6, 9, 14]
+2025-05-12 11:13:53,095 - INFO - Froze 8 layers of the vision backbone
+2025-05-12 11:13:53,109 - INFO - Initialized FaceEmotionClassifier with openai/clip-vit-large-patch14
+2025-05-12 11:13:53,109 - INFO - Feature dimension: 1024
+2025-05-12 11:13:54,181 - INFO - Model architecture:
+FaceEmotionClassifier(
+  (vision_model): CLIPVisionModel(
+    (vision_model): CLIPVisionTransformer(
+      (embeddings): CLIPVisionEmbeddings(
+        (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14), bias=False)
+        (position_embedding): Embedding(257, 1024)
+      )
+      (pre_layrnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (encoder): CLIPEncoder(
+        (layers): ModuleList(
+          (0-23): 24 x CLIPEncoderLayer(
+            (self_attn): CLIPSdpaAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (layer_norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (mlp): CLIPMLP(
+              (activation_fn): QuickGELUActivation()
+              (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+              (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            )
+            (layer_norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (post_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (6): GELU(approximate='none')
+    (7): Dropout(p=0.2, inplace=False)
+    (8): Linear(in_features=256, out_features=2, bias=True)
+  )
+  (projection): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Linear(in_features=512, out_features=256, bias=True)
+  )
+)
+2025-05-12 11:20:56,024 - INFO - Using device: cuda
+2025-05-12 11:20:57,217 - INFO - Loaded 880 samples with face data
+2025-05-12 11:20:57,217 - INFO - Class distribution: {0: 400, 1: 480}
+2025-05-12 11:20:57,217 - INFO - Class weights: {0: 1.1, 1: 0.9166666666666666}
+2025-05-12 11:20:57,218 - INFO - Balanced classes: 880 -> 960 samples
+2025-05-12 11:20:57,218 - INFO - Class distribution: {0: 480, 1: 480}
+2025-05-12 11:20:57,219 - INFO - Class weights: {0: 1.0, 1: 1.0}
+2025-05-12 11:20:57,220 - INFO - Train split: 657 samples, 15 subjects
+2025-05-12 11:20:57,220 - INFO - Val split: 132 samples, 3 subjects
+2025-05-12 11:20:57,221 - INFO - Test split: 171 samples, 4 subjects
+2025-05-12 11:20:57,221 - INFO - Train subjects: [3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 17, 18, 19, 20, 22]
+2025-05-12 11:20:57,221 - INFO - Val subjects: [2, 16, 21]
+2025-05-12 11:20:57,221 - INFO - Test subjects: [1, 6, 9, 14]
+2025-05-12 11:20:57,822 - INFO - Froze 8 layers of the vision backbone
+2025-05-12 11:20:57,832 - INFO - Initialized FaceEmotionClassifier with openai/clip-vit-large-patch14
+2025-05-12 11:20:57,832 - INFO - Feature dimension: 1024
+2025-05-12 11:20:58,796 - INFO - Model architecture:
+FaceEmotionClassifier(
+  (vision_model): CLIPVisionModel(
+    (vision_model): CLIPVisionTransformer(
+      (embeddings): CLIPVisionEmbeddings(
+        (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14), bias=False)
+        (position_embedding): Embedding(257, 1024)
+      )
+      (pre_layrnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (encoder): CLIPEncoder(
+        (layers): ModuleList(
+          (0-23): 24 x CLIPEncoderLayer(
+            (self_attn): CLIPSdpaAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (layer_norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (mlp): CLIPMLP(
+              (activation_fn): QuickGELUActivation()
+              (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+              (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            )
+            (layer_norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (post_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (6): GELU(approximate='none')
+    (7): Dropout(p=0.2, inplace=False)
+    (8): Linear(in_features=256, out_features=2, bias=True)
+  )
+  (projection): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Linear(in_features=512, out_features=256, bias=True)
+  )
+)
+2025-05-12 11:23:14,691 - INFO - Using device: cuda
+2025-05-12 11:23:15,631 - INFO - Loaded 880 samples with face data
+2025-05-12 11:23:15,632 - INFO - Class distribution: {0: 400, 1: 480}
+2025-05-12 11:23:15,632 - INFO - Class weights: {0: 1.1, 1: 0.9166666666666666}
+2025-05-12 11:23:15,633 - INFO - Balanced classes: 880 -> 960 samples
+2025-05-12 11:23:15,633 - INFO - Class distribution: {0: 480, 1: 480}
+2025-05-12 11:23:15,633 - INFO - Class weights: {0: 1.0, 1: 1.0}
+2025-05-12 11:23:15,635 - INFO - Train split: 648 samples, 15 subjects
+2025-05-12 11:23:15,635 - INFO - Val split: 132 samples, 3 subjects
+2025-05-12 11:23:15,635 - INFO - Test split: 180 samples, 4 subjects
+2025-05-12 11:23:15,635 - INFO - Train subjects: [3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 17, 18, 19, 20, 22]
+2025-05-12 11:23:15,635 - INFO - Val subjects: [2, 16, 21]
+2025-05-12 11:23:15,636 - INFO - Test subjects: [1, 6, 9, 14]
+2025-05-12 11:23:16,694 - INFO - Froze 8 layers of the vision backbone
+2025-05-12 11:23:16,705 - INFO - Initialized FaceEmotionClassifier with openai/clip-vit-large-patch14
+2025-05-12 11:23:16,706 - INFO - Feature dimension: 1024
+2025-05-12 11:23:17,637 - INFO - Model architecture:
+FaceEmotionClassifier(
+  (vision_model): CLIPVisionModel(
+    (vision_model): CLIPVisionTransformer(
+      (embeddings): CLIPVisionEmbeddings(
+        (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14), bias=False)
+        (position_embedding): Embedding(257, 1024)
+      )
+      (pre_layrnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (encoder): CLIPEncoder(
+        (layers): ModuleList(
+          (0-23): 24 x CLIPEncoderLayer(
+            (self_attn): CLIPSdpaAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (layer_norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (mlp): CLIPMLP(
+              (activation_fn): QuickGELUActivation()
+              (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+              (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            )
+            (layer_norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (post_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (6): GELU(approximate='none')
+    (7): Dropout(p=0.2, inplace=False)
+    (8): Linear(in_features=256, out_features=2, bias=True)
+  )
+  (projection): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Linear(in_features=512, out_features=256, bias=True)
+  )
+)
+2025-05-12 11:24:00,631 - WARNING - Input feature dimension (768) doesn't match expected dimension (1024)
+2025-05-12 11:24:00,632 - WARNING - Reconstructing classifier and projection heads to match input dimension
+2025-05-12 11:24:44,054 - INFO - Epoch 1/200:
+2025-05-12 11:24:44,058 - INFO -   Train Loss: 0.7442, Acc: 0.5077, F1: 0.4287
+2025-05-12 11:24:44,058 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:24:44,059 - INFO -   Learning Rate: 0.000010
+2025-05-12 11:24:57,767 - INFO -   New best model saved with accuracy: 0.4621
+2025-05-12 11:26:56,554 - INFO - Epoch 2/200:
+2025-05-12 11:26:56,556 - INFO -   Train Loss: 0.7337, Acc: 0.5093, F1: 0.4297
+2025-05-12 11:26:56,557 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:26:56,558 - INFO -   Learning Rate: 0.000020
+2025-05-12 11:26:56,563 - INFO -   No improvement for 1 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:28:08,175 - INFO - Epoch 3/200:
+2025-05-12 11:28:08,177 - INFO -   Train Loss: 0.7496, Acc: 0.4985, F1: 0.4240
+2025-05-12 11:28:08,177 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:28:08,178 - INFO -   Learning Rate: 0.000030
+2025-05-12 11:28:08,178 - INFO -   No improvement for 2 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:29:17,907 - INFO - Epoch 4/200:
+2025-05-12 11:29:17,920 - INFO -   Train Loss: 0.7475, Acc: 0.4907, F1: 0.4271
+2025-05-12 11:29:17,920 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:29:17,921 - INFO -   Learning Rate: 0.000040
+2025-05-12 11:29:17,921 - INFO -   No improvement for 3 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:30:23,622 - INFO - Epoch 5/200:
+2025-05-12 11:30:23,623 - INFO -   Train Loss: 0.7371, Acc: 0.5046, F1: 0.4421
+2025-05-12 11:30:23,623 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:30:23,624 - INFO -   Learning Rate: 0.000050
+2025-05-12 11:30:23,624 - INFO -   No improvement for 4 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:31:28,704 - INFO - Epoch 6/200:
+2025-05-12 11:31:28,705 - INFO -   Train Loss: 0.7512, Acc: 0.4923, F1: 0.4295
+2025-05-12 11:31:28,705 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:31:28,705 - INFO -   Learning Rate: 0.000060
+2025-05-12 11:31:28,706 - INFO -   No improvement for 5 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:32:33,122 - INFO - Epoch 7/200:
+2025-05-12 11:32:33,133 - INFO -   Train Loss: 0.7273, Acc: 0.5293, F1: 0.4621
+2025-05-12 11:32:33,133 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:32:33,133 - INFO -   Learning Rate: 0.000070
+2025-05-12 11:32:33,134 - INFO -   No improvement for 6 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:33:37,186 - INFO - Epoch 8/200:
+2025-05-12 11:33:37,195 - INFO -   Train Loss: 0.7357, Acc: 0.5262, F1: 0.4639
+2025-05-12 11:33:37,195 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:33:37,195 - INFO -   Learning Rate: 0.000080
+2025-05-12 11:33:37,196 - INFO -   No improvement for 7 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:34:39,314 - INFO - Epoch 9/200:
+2025-05-12 11:34:39,318 - INFO -   Train Loss: 0.7521, Acc: 0.4861, F1: 0.4142
+2025-05-12 11:34:39,318 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:34:39,318 - INFO -   Learning Rate: 0.000090
+2025-05-12 11:34:39,319 - INFO -   No improvement for 8 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:35:41,619 - INFO - Epoch 10/200:
+2025-05-12 11:35:41,626 - INFO -   Train Loss: 0.7559, Acc: 0.4830, F1: 0.4150
+2025-05-12 11:35:41,626 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:35:41,627 - INFO -   Learning Rate: 0.000100
+2025-05-12 11:35:41,629 - INFO -   No improvement for 9 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:36:47,945 - INFO - Epoch 11/200:
+2025-05-12 11:36:47,953 - INFO -   Train Loss: 0.7270, Acc: 0.5262, F1: 0.4559
+2025-05-12 11:36:47,954 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:36:47,954 - INFO -   Learning Rate: 0.000100
+2025-05-12 11:36:47,955 - INFO -   No improvement for 10 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:37:50,262 - INFO - Epoch 12/200:
+2025-05-12 11:37:50,264 - INFO -   Train Loss: 0.7523, Acc: 0.4907, F1: 0.4173
+2025-05-12 11:37:50,264 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:37:50,265 - INFO -   Learning Rate: 0.000100
+2025-05-12 11:37:50,266 - INFO -   No improvement for 11 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:38:56,746 - INFO - Epoch 13/200:
+2025-05-12 11:38:56,746 - INFO -   Train Loss: 0.7553, Acc: 0.5015, F1: 0.4246
+2025-05-12 11:38:56,752 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:38:56,752 - INFO -   Learning Rate: 0.000100
+2025-05-12 11:38:56,753 - INFO -   No improvement for 12 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:40:02,175 - INFO - Epoch 14/200:
+2025-05-12 11:40:02,178 - INFO -   Train Loss: 0.7438, Acc: 0.4938, F1: 0.4149
+2025-05-12 11:40:02,178 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:40:02,178 - INFO -   Learning Rate: 0.000100
+2025-05-12 11:40:02,179 - INFO -   No improvement for 13 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:41:24,825 - INFO - Epoch 15/200:
+2025-05-12 11:41:24,831 - INFO -   Train Loss: 0.7469, Acc: 0.5031, F1: 0.4271
+2025-05-12 11:41:24,832 - INFO -   Val Loss: 0.8161, Acc: 0.4621, F1: 0.3161
+2025-05-12 11:41:24,833 - INFO -   Learning Rate: 0.000100
+2025-05-12 11:41:24,833 - INFO -   No improvement for 14 epochs (best: 0.4621 at epoch 1)
+2025-05-12 11:48:43,746 - INFO - Using device: cuda
+2025-05-12 11:48:44,506 - INFO - Loaded 880 samples with face data
+2025-05-12 11:48:44,512 - INFO - Class distribution: {0: 400, 1: 480}
+2025-05-12 11:48:44,512 - INFO - Class weights: {0: 1.1, 1: 0.9166666666666666}
+2025-05-12 11:48:44,513 - INFO - Balanced classes: 880 -> 960 samples
+2025-05-12 11:48:44,513 - INFO - Class distribution: {0: 480, 1: 480}
+2025-05-12 11:48:44,513 - INFO - Class weights: {0: 1.0, 1: 1.0}
+2025-05-12 11:48:44,532 - INFO - Train split: 656 samples, 15 subjects
+2025-05-12 11:48:44,532 - INFO - Val split: 132 samples, 3 subjects
+2025-05-12 11:48:44,532 - INFO - Test split: 172 samples, 4 subjects
+2025-05-12 11:48:44,533 - INFO - Train subjects: [3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 17, 18, 19, 20, 22]
+2025-05-12 11:48:44,533 - INFO - Val subjects: [2, 16, 21]
+2025-05-12 11:48:44,534 - INFO - Test subjects: [1, 6, 9, 14]
+2025-05-12 11:48:45,231 - INFO - Froze 4 layers of the vision backbone
+2025-05-12 11:48:45,243 - INFO - Initialized FaceEmotionClassifier with openai/clip-vit-large-patch14
+2025-05-12 11:48:45,244 - INFO - Feature dimension: 1024
+2025-05-12 11:48:47,777 - INFO - Model architecture:
+FaceEmotionClassifier(
+  (vision_model): CLIPVisionModel(
+    (vision_model): CLIPVisionTransformer(
+      (embeddings): CLIPVisionEmbeddings(
+        (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14), bias=False)
+        (position_embedding): Embedding(257, 1024)
+      )
+      (pre_layrnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (encoder): CLIPEncoder(
+        (layers): ModuleList(
+          (0-23): 24 x CLIPEncoderLayer(
+            (self_attn): CLIPSdpaAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (layer_norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (mlp): CLIPMLP(
+              (activation_fn): QuickGELUActivation()
+              (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+              (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            )
+            (layer_norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (post_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.4, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (6): GELU(approximate='none')
+    (7): Dropout(p=0.3, inplace=False)
+    (8): Linear(in_features=256, out_features=2, bias=True)
+  )
+  (projection): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.2, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+  )
+  (aux_classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=256, out_features=2, bias=True)
+  )
+)
+2025-05-12 11:49:25,689 - WARNING - Input feature dimension (768) doesn't match expected dimension (1024)
+2025-05-12 11:49:25,690 - WARNING - Reconstructing classifier and projection heads to match input dimension
+2025-05-12 11:49:59,726 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:49:59,729 - INFO - Epoch 1/200:
+2025-05-12 11:49:59,729 - INFO -   Train Loss: 0.9969, Acc: 0.4924, F1: 0.4085
+2025-05-12 11:49:59,730 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:49:59,730 - INFO -   Learning Rate: 0.000000
+2025-05-12 11:50:11,056 - INFO -   New best model saved with accuracy: 0.5379
+2025-05-12 11:51:49,652 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:51:49,654 - INFO - Epoch 2/200:
+2025-05-12 11:51:49,655 - INFO -   Train Loss: 1.0168, Acc: 0.4909, F1: 0.4152
+2025-05-12 11:51:49,655 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:51:49,655 - INFO -   Learning Rate: 0.000001
+2025-05-12 11:51:49,657 - INFO -   No improvement for 1 epochs (best: 0.5379 at epoch 1)
+2025-05-12 11:53:00,714 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:53:00,716 - INFO - Epoch 3/200:
+2025-05-12 11:53:00,716 - INFO -   Train Loss: 1.0172, Acc: 0.4863, F1: 0.4178
+2025-05-12 11:53:00,717 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:53:00,718 - INFO -   Learning Rate: 0.000001
+2025-05-12 11:53:00,719 - INFO -   No improvement for 2 epochs (best: 0.5379 at epoch 1)
+2025-05-12 11:54:05,125 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:54:05,126 - INFO - Epoch 4/200:
+2025-05-12 11:54:05,126 - INFO -   Train Loss: 0.9976, Acc: 0.4924, F1: 0.4261
+2025-05-12 11:54:05,127 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:54:05,127 - INFO -   Learning Rate: 0.000001
+2025-05-12 11:54:05,127 - INFO -   No improvement for 3 epochs (best: 0.5379 at epoch 1)
+2025-05-12 11:55:10,690 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:55:10,706 - INFO - Epoch 5/200:
+2025-05-12 11:55:10,706 - INFO -   Train Loss: 1.0121, Acc: 0.4817, F1: 0.4016
+2025-05-12 11:55:10,707 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:55:10,707 - INFO -   Learning Rate: 0.000001
+2025-05-12 11:55:10,708 - INFO -   No improvement for 4 epochs (best: 0.5379 at epoch 1)
+2025-05-12 11:56:13,014 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:56:13,016 - INFO - Epoch 6/200:
+2025-05-12 11:56:13,016 - INFO -   Train Loss: 0.9993, Acc: 0.5122, F1: 0.4397
+2025-05-12 11:56:13,016 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:56:13,017 - INFO -   Learning Rate: 0.000002
+2025-05-12 11:56:13,018 - INFO -   No improvement for 5 epochs (best: 0.5379 at epoch 1)
+2025-05-12 11:57:16,772 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:57:16,778 - INFO - Epoch 7/200:
+2025-05-12 11:57:16,779 - INFO -   Train Loss: 1.0256, Acc: 0.4619, F1: 0.3887
+2025-05-12 11:57:16,779 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:57:16,779 - INFO -   Learning Rate: 0.000002
+2025-05-12 11:57:16,780 - INFO -   No improvement for 6 epochs (best: 0.5379 at epoch 1)
+2025-05-12 11:58:19,924 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:58:19,929 - INFO - Epoch 8/200:
+2025-05-12 11:58:19,929 - INFO -   Train Loss: 1.0050, Acc: 0.5091, F1: 0.4288
+2025-05-12 11:58:19,930 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:58:19,930 - INFO -   Learning Rate: 0.000002
+2025-05-12 11:58:19,931 - INFO -   No improvement for 7 epochs (best: 0.5379 at epoch 1)
+2025-05-12 11:59:22,648 - INFO - Prediction distribution: {0: 132}
+2025-05-12 11:59:22,648 - INFO - Epoch 9/200:
+2025-05-12 11:59:22,664 - INFO -   Train Loss: 1.0237, Acc: 0.4680, F1: 0.3834
+2025-05-12 11:59:22,664 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 11:59:22,665 - INFO -   Learning Rate: 0.000002
+2025-05-12 11:59:22,665 - INFO -   No improvement for 8 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:00:26,289 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:00:26,291 - INFO - Epoch 10/200:
+2025-05-12 12:00:26,291 - INFO -   Train Loss: 0.9779, Acc: 0.5305, F1: 0.4607
+2025-05-12 12:00:26,291 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:00:26,292 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:00:26,292 - INFO -   No improvement for 9 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:01:38,332 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:01:38,333 - INFO - Epoch 11/200:
+2025-05-12 12:01:38,334 - INFO -   Train Loss: 0.9899, Acc: 0.4802, F1: 0.4109
+2025-05-12 12:01:38,334 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:01:38,334 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:01:38,335 - INFO -   No improvement for 10 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:02:46,813 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:02:46,814 - INFO - Epoch 12/200:
+2025-05-12 12:02:46,816 - INFO -   Train Loss: 1.0231, Acc: 0.4970, F1: 0.4207
+2025-05-12 12:02:46,817 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:02:46,817 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:02:46,817 - INFO -   No improvement for 11 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:03:51,181 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:03:51,182 - INFO - Epoch 13/200:
+2025-05-12 12:03:51,182 - INFO -   Train Loss: 0.9983, Acc: 0.4924, F1: 0.4274
+2025-05-12 12:03:51,182 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:03:51,183 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:03:51,183 - INFO -   No improvement for 12 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:04:53,698 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:04:53,711 - INFO - Epoch 14/200:
+2025-05-12 12:04:53,711 - INFO -   Train Loss: 0.9958, Acc: 0.5076, F1: 0.4393
+2025-05-12 12:04:53,711 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:04:53,711 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:04:53,712 - INFO -   No improvement for 13 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:05:56,002 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:05:56,006 - INFO - Epoch 15/200:
+2025-05-12 12:05:56,006 - INFO -   Train Loss: 1.0176, Acc: 0.4771, F1: 0.3806
+2025-05-12 12:05:56,007 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:05:56,007 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:05:56,008 - INFO -   No improvement for 14 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:06:57,551 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:06:57,552 - INFO - Epoch 16/200:
+2025-05-12 12:06:57,553 - INFO -   Train Loss: 1.0139, Acc: 0.4939, F1: 0.4216
+2025-05-12 12:06:57,553 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:06:57,553 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:06:57,554 - INFO -   No improvement for 15 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:07:59,789 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:07:59,790 - INFO - Epoch 17/200:
+2025-05-12 12:07:59,791 - INFO -   Train Loss: 1.0037, Acc: 0.5046, F1: 0.4227
+2025-05-12 12:07:59,791 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:07:59,791 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:07:59,792 - INFO -   No improvement for 16 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:09:01,328 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:09:01,336 - INFO - Epoch 18/200:
+2025-05-12 12:09:01,336 - INFO -   Train Loss: 1.0050, Acc: 0.4848, F1: 0.4154
+2025-05-12 12:09:01,336 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:09:01,337 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:09:01,338 - INFO -   No improvement for 17 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:10:02,803 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:10:02,813 - INFO - Epoch 19/200:
+2025-05-12 12:10:02,813 - INFO -   Train Loss: 1.0019, Acc: 0.4848, F1: 0.4036
+2025-05-12 12:10:02,813 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:10:02,814 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:10:02,815 - INFO -   No improvement for 18 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:11:04,436 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:11:04,437 - INFO - Epoch 20/200:
+2025-05-12 12:11:04,437 - INFO -   Train Loss: 0.9948, Acc: 0.5290, F1: 0.4610
+2025-05-12 12:11:04,438 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:11:04,438 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:11:04,439 - INFO -   No improvement for 19 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:13:05,343 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:13:05,343 - INFO - Epoch 21/200:
+2025-05-12 12:13:05,344 - INFO -   Train Loss: 0.9922, Acc: 0.5137, F1: 0.4515
+2025-05-12 12:13:05,344 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:13:05,344 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:13:05,345 - INFO -   No improvement for 20 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:14:19,342 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:14:19,343 - INFO - Epoch 22/200:
+2025-05-12 12:14:19,343 - INFO -   Train Loss: 1.0078, Acc: 0.4970, F1: 0.4192
+2025-05-12 12:14:19,344 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:14:19,344 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:14:19,344 - INFO -   No improvement for 21 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:15:24,366 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:15:24,366 - INFO - Epoch 23/200:
+2025-05-12 12:15:24,367 - INFO -   Train Loss: 1.0041, Acc: 0.4985, F1: 0.4202
+2025-05-12 12:15:24,367 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:15:24,367 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:15:24,368 - INFO -   No improvement for 22 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:16:28,169 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:16:28,170 - INFO - Epoch 24/200:
+2025-05-12 12:16:28,170 - INFO -   Train Loss: 1.0089, Acc: 0.4939, F1: 0.4284
+2025-05-12 12:16:28,170 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:16:28,171 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:16:28,172 - INFO -   No improvement for 23 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:17:31,606 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:17:31,607 - INFO - Epoch 25/200:
+2025-05-12 12:17:31,608 - INFO -   Train Loss: 1.0127, Acc: 0.5183, F1: 0.4560
+2025-05-12 12:17:31,608 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:17:31,608 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:17:31,609 - INFO -   No improvement for 24 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:18:34,906 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:18:34,907 - INFO - Epoch 26/200:
+2025-05-12 12:18:34,908 - INFO -   Train Loss: 0.9967, Acc: 0.4985, F1: 0.4187
+2025-05-12 12:18:34,908 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:18:34,909 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:18:34,909 - INFO -   No improvement for 25 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:19:40,410 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:19:40,411 - INFO - Epoch 27/200:
+2025-05-12 12:19:40,411 - INFO -   Train Loss: 1.0093, Acc: 0.4893, F1: 0.4141
+2025-05-12 12:19:40,411 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:19:40,412 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:19:40,413 - INFO -   No improvement for 26 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:20:46,955 - INFO - Prediction distribution: {0: 132}
+2025-05-12 12:20:46,956 - INFO - Epoch 28/200:
+2025-05-12 12:20:46,956 - INFO -   Train Loss: 1.0108, Acc: 0.4665, F1: 0.3932
+2025-05-12 12:20:46,956 - INFO -   Val Loss: 0.6849, Acc: 0.5379, F1: 0.3498
+2025-05-12 12:20:46,957 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:20:46,958 - INFO -   No improvement for 27 epochs (best: 0.5379 at epoch 1)
+2025-05-12 12:21:39,927 - INFO - Using device: cuda
+2025-05-12 12:21:45,070 - INFO - Loaded 880 samples with face data
+2025-05-12 12:21:45,070 - INFO - Class distribution: {0: 400, 1: 480}
+2025-05-12 12:21:45,070 - INFO - Class weights: {0: 1.1, 1: 0.9166666666666666}
+2025-05-12 12:21:45,070 - INFO - Balanced classes: 880 -> 960 samples
+2025-05-12 12:21:45,070 - INFO - Class distribution: {0: 480, 1: 480}
+2025-05-12 12:21:45,070 - INFO - Class weights: {0: 1.0, 1: 1.0}
+2025-05-12 12:21:45,070 - INFO - Train split: 654 samples, 15 subjects
+2025-05-12 12:21:45,070 - INFO - Val split: 133 samples, 3 subjects
+2025-05-12 12:21:45,070 - INFO - Test split: 173 samples, 4 subjects
+2025-05-12 12:21:45,070 - INFO - Train subjects: [3, 4, 5, 7, 8, 10, 11, 12, 13, 15, 17, 18, 19, 20, 22]
+2025-05-12 12:21:45,070 - INFO - Val subjects: [2, 16, 21]
+2025-05-12 12:21:45,070 - INFO - Test subjects: [1, 6, 9, 14]
+2025-05-12 12:21:46,142 - INFO - Froze 4 layers of the vision backbone
+2025-05-12 12:21:46,142 - INFO - Initialized FaceEmotionClassifier with openai/clip-vit-large-patch14
+2025-05-12 12:21:46,142 - INFO - Feature dimension: 1024
+2025-05-12 12:21:48,571 - INFO - Model architecture:
+FaceEmotionClassifier(
+  (vision_model): CLIPVisionModel(
+    (vision_model): CLIPVisionTransformer(
+      (embeddings): CLIPVisionEmbeddings(
+        (patch_embedding): Conv2d(3, 1024, kernel_size=(14, 14), stride=(14, 14), bias=False)
+        (position_embedding): Embedding(257, 1024)
+      )
+      (pre_layrnorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (encoder): CLIPEncoder(
+        (layers): ModuleList(
+          (0-23): 24 x CLIPEncoderLayer(
+            (self_attn): CLIPSdpaAttention(
+              (k_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (v_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (q_proj): Linear(in_features=1024, out_features=1024, bias=True)
+              (out_proj): Linear(in_features=1024, out_features=1024, bias=True)
+            )
+            (layer_norm1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (mlp): CLIPMLP(
+              (activation_fn): QuickGELUActivation()
+              (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+              (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+            )
+            (layer_norm2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+      )
+      (post_layernorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.4, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (6): GELU(approximate='none')
+    (7): Dropout(p=0.3, inplace=False)
+    (8): Linear(in_features=256, out_features=2, bias=True)
+  )
+  (projection): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.2, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+  )
+  (aux_classifier): Sequential(
+    (0): Linear(in_features=1024, out_features=256, bias=True)
+    (1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (2): GELU(approximate='none')
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=256, out_features=2, bias=True)
+  )
+)
+2025-05-12 12:22:48,321 - WARNING - Input feature dimension (768) doesn't match expected dimension (1024)
+2025-05-12 12:22:48,323 - WARNING - Reconstructing classifier and projection heads to match input dimension
+2025-05-12 12:23:21,550 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:23:21,563 - INFO - Epoch 1/200:
+2025-05-12 12:23:21,563 - INFO -   Train Loss: 1.0042, Acc: 0.4969, F1: 0.4252
+2025-05-12 12:23:21,563 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:23:21,564 - INFO -   Learning Rate: 0.000000
+2025-05-12 12:23:32,240 - INFO -   New best model saved with accuracy: 0.5414
+2025-05-12 12:25:01,952 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:25:01,953 - INFO - Epoch 2/200:
+2025-05-12 12:25:01,954 - INFO -   Train Loss: 0.9973, Acc: 0.5000, F1: 0.4199
+2025-05-12 12:25:01,954 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:25:01,954 - INFO -   Learning Rate: 0.000001
+2025-05-12 12:25:01,955 - INFO -   No improvement for 1 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:26:03,872 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:26:03,874 - INFO - Epoch 3/200:
+2025-05-12 12:26:03,875 - INFO -   Train Loss: 0.9998, Acc: 0.5061, F1: 0.4315
+2025-05-12 12:26:03,875 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:26:03,875 - INFO -   Learning Rate: 0.000001
+2025-05-12 12:26:03,876 - INFO -   No improvement for 2 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:27:05,679 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:27:05,685 - INFO - Epoch 4/200:
+2025-05-12 12:27:05,685 - INFO -   Train Loss: 1.0074, Acc: 0.4725, F1: 0.3958
+2025-05-12 12:27:05,686 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:27:05,687 - INFO -   Learning Rate: 0.000001
+2025-05-12 12:27:05,687 - INFO -   No improvement for 3 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:28:07,899 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:28:07,901 - INFO - Epoch 5/200:
+2025-05-12 12:28:07,901 - INFO -   Train Loss: 1.0132, Acc: 0.4801, F1: 0.3961
+2025-05-12 12:28:07,901 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:28:07,902 - INFO -   Learning Rate: 0.000001
+2025-05-12 12:28:07,903 - INFO -   No improvement for 4 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:29:09,272 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:29:09,274 - INFO - Epoch 6/200:
+2025-05-12 12:29:09,275 - INFO -   Train Loss: 1.0009, Acc: 0.5138, F1: 0.4478
+2025-05-12 12:29:09,275 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:29:09,275 - INFO -   Learning Rate: 0.000002
+2025-05-12 12:29:09,276 - INFO -   No improvement for 5 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:30:10,890 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:30:10,894 - INFO - Epoch 7/200:
+2025-05-12 12:30:10,894 - INFO -   Train Loss: 1.0145, Acc: 0.4908, F1: 0.4252
+2025-05-12 12:30:10,894 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:30:10,895 - INFO -   Learning Rate: 0.000002
+2025-05-12 12:30:10,895 - INFO -   No improvement for 6 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:31:12,203 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:31:12,214 - INFO - Epoch 8/200:
+2025-05-12 12:31:12,215 - INFO -   Train Loss: 1.0124, Acc: 0.4755, F1: 0.3962
+2025-05-12 12:31:12,215 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:31:12,215 - INFO -   Learning Rate: 0.000002
+2025-05-12 12:31:12,216 - INFO -   No improvement for 7 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:32:13,528 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:32:13,531 - INFO - Epoch 9/200:
+2025-05-12 12:32:13,531 - INFO -   Train Loss: 1.0118, Acc: 0.5138, F1: 0.4424
+2025-05-12 12:32:13,531 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:32:13,531 - INFO -   Learning Rate: 0.000002
+2025-05-12 12:32:13,532 - INFO -   No improvement for 8 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:33:15,125 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:33:15,127 - INFO - Epoch 10/200:
+2025-05-12 12:33:15,128 - INFO -   Train Loss: 0.9980, Acc: 0.5107, F1: 0.4416
+2025-05-12 12:33:15,128 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:33:15,128 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:33:15,129 - INFO -   No improvement for 9 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:34:17,008 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:34:17,018 - INFO - Epoch 11/200:
+2025-05-12 12:34:17,018 - INFO -   Train Loss: 0.9953, Acc: 0.4985, F1: 0.4358
+2025-05-12 12:34:17,018 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:34:17,019 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:34:17,020 - INFO -   No improvement for 10 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:35:18,502 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:35:18,508 - INFO - Epoch 12/200:
+2025-05-12 12:35:18,508 - INFO -   Train Loss: 0.9953, Acc: 0.5122, F1: 0.4385
+2025-05-12 12:35:18,508 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:35:18,509 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:35:18,509 - INFO -   No improvement for 11 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:36:19,952 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:36:19,954 - INFO - Epoch 13/200:
+2025-05-12 12:36:19,954 - INFO -   Train Loss: 1.0132, Acc: 0.4924, F1: 0.4262
+2025-05-12 12:36:19,955 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:36:19,955 - INFO -   Learning Rate: 0.000003
+2025-05-12 12:36:19,955 - INFO -   No improvement for 12 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:37:21,486 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:37:21,502 - INFO - Epoch 14/200:
+2025-05-12 12:37:21,503 - INFO -   Train Loss: 1.0158, Acc: 0.5015, F1: 0.4283
+2025-05-12 12:37:21,503 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:37:21,503 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:37:21,504 - INFO -   No improvement for 13 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:38:23,509 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:38:23,510 - INFO - Epoch 15/200:
+2025-05-12 12:38:23,510 - INFO -   Train Loss: 1.0229, Acc: 0.4801, F1: 0.4053
+2025-05-12 12:38:23,510 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:38:23,511 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:38:23,511 - INFO -   No improvement for 14 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:39:27,917 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:39:27,918 - INFO - Epoch 16/200:
+2025-05-12 12:39:27,918 - INFO -   Train Loss: 1.0068, Acc: 0.5168, F1: 0.4552
+2025-05-12 12:39:27,918 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:39:27,919 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:39:27,919 - INFO -   No improvement for 15 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:40:30,379 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:40:30,382 - INFO - Epoch 17/200:
+2025-05-12 12:40:30,383 - INFO -   Train Loss: 1.0055, Acc: 0.4908, F1: 0.4061
+2025-05-12 12:40:30,383 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:40:30,383 - INFO -   Learning Rate: 0.000004
+2025-05-12 12:40:30,384 - INFO -   No improvement for 16 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:41:33,162 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:41:33,173 - INFO - Epoch 18/200:
+2025-05-12 12:41:33,173 - INFO -   Train Loss: 1.0006, Acc: 0.5076, F1: 0.4435
+2025-05-12 12:41:33,173 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:41:33,174 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:41:33,174 - INFO -   No improvement for 17 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:42:35,897 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:42:35,900 - INFO - Epoch 19/200:
+2025-05-12 12:42:35,900 - INFO -   Train Loss: 1.0233, Acc: 0.4664, F1: 0.3825
+2025-05-12 12:42:35,900 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:42:35,901 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:42:35,902 - INFO -   No improvement for 18 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:43:38,642 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:43:38,644 - INFO - Epoch 20/200:
+2025-05-12 12:43:38,644 - INFO -   Train Loss: 0.9777, Acc: 0.5183, F1: 0.4550
+2025-05-12 12:43:38,644 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:43:38,645 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:43:38,645 - INFO -   No improvement for 19 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:44:41,535 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:44:41,536 - INFO - Epoch 21/200:
+2025-05-12 12:44:41,537 - INFO -   Train Loss: 1.0175, Acc: 0.4954, F1: 0.4297
+2025-05-12 12:44:41,537 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:44:41,538 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:44:41,538 - INFO -   No improvement for 20 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:45:48,561 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:45:48,563 - INFO - Epoch 22/200:
+2025-05-12 12:45:48,564 - INFO -   Train Loss: 1.0098, Acc: 0.4878, F1: 0.4088
+2025-05-12 12:45:48,564 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:45:48,564 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:45:48,565 - INFO -   No improvement for 21 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:47:00,014 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:47:00,015 - INFO - Epoch 23/200:
+2025-05-12 12:47:00,016 - INFO -   Train Loss: 1.0047, Acc: 0.4725, F1: 0.3943
+2025-05-12 12:47:00,016 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:47:00,016 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:47:00,017 - INFO -   No improvement for 22 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:48:05,224 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:48:05,224 - INFO - Epoch 24/200:
+2025-05-12 12:48:05,224 - INFO -   Train Loss: 1.0034, Acc: 0.4969, F1: 0.4347
+2025-05-12 12:48:05,224 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:48:05,224 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:48:05,230 - INFO -   No improvement for 23 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:49:09,859 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:49:09,861 - INFO - Epoch 25/200:
+2025-05-12 12:49:09,862 - INFO -   Train Loss: 0.9942, Acc: 0.5031, F1: 0.4350
+2025-05-12 12:49:09,862 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:49:09,862 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:49:09,863 - INFO -   No improvement for 24 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:50:14,434 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:50:14,434 - INFO - Epoch 26/200:
+2025-05-12 12:50:14,445 - INFO -   Train Loss: 0.9995, Acc: 0.4985, F1: 0.4110
+2025-05-12 12:50:14,445 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:50:14,445 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:50:14,446 - INFO -   No improvement for 25 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:51:18,044 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:51:18,046 - INFO - Epoch 27/200:
+2025-05-12 12:51:18,047 - INFO -   Train Loss: 0.9992, Acc: 0.5061, F1: 0.4255
+2025-05-12 12:51:18,047 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:51:18,047 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:51:18,048 - INFO -   No improvement for 26 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:52:24,159 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:52:24,160 - INFO - Epoch 28/200:
+2025-05-12 12:52:24,160 - INFO -   Train Loss: 1.0070, Acc: 0.5046, F1: 0.4260
+2025-05-12 12:52:24,160 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:52:24,161 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:52:24,161 - INFO -   No improvement for 27 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:53:30,028 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:53:30,029 - INFO - Epoch 29/200:
+2025-05-12 12:53:30,029 - INFO -   Train Loss: 1.0073, Acc: 0.4847, F1: 0.4068
+2025-05-12 12:53:30,029 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:53:30,030 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:53:30,030 - INFO -   No improvement for 28 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:54:34,472 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:54:34,474 - INFO - Epoch 30/200:
+2025-05-12 12:54:34,474 - INFO -   Train Loss: 0.9963, Acc: 0.5153, F1: 0.4420
+2025-05-12 12:54:34,474 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:54:34,475 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:54:34,475 - INFO -   No improvement for 29 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:56:09,936 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:56:09,938 - INFO - Epoch 31/200:
+2025-05-12 12:56:09,939 - INFO -   Train Loss: 0.9958, Acc: 0.5061, F1: 0.4371
+2025-05-12 12:56:09,939 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:56:09,939 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:56:09,940 - INFO -   No improvement for 30 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:57:12,953 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:57:12,957 - INFO - Epoch 32/200:
+2025-05-12 12:57:12,957 - INFO -   Train Loss: 0.9967, Acc: 0.5000, F1: 0.4199
+2025-05-12 12:57:12,958 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:57:12,958 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:57:12,959 - INFO -   No improvement for 31 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:58:15,546 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:58:15,548 - INFO - Epoch 33/200:
+2025-05-12 12:58:15,548 - INFO -   Train Loss: 0.9892, Acc: 0.5015, F1: 0.4405
+2025-05-12 12:58:15,549 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:58:15,549 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:58:15,550 - INFO -   No improvement for 32 epochs (best: 0.5414 at epoch 1)
+2025-05-12 12:59:18,900 - INFO - Prediction distribution: {0: 133}
+2025-05-12 12:59:18,901 - INFO - Epoch 34/200:
+2025-05-12 12:59:18,901 - INFO -   Train Loss: 1.0159, Acc: 0.4832, F1: 0.4172
+2025-05-12 12:59:18,902 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 12:59:18,902 - INFO -   Learning Rate: 0.000005
+2025-05-12 12:59:18,903 - INFO -   No improvement for 33 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:00:21,582 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:00:21,588 - INFO - Epoch 35/200:
+2025-05-12 13:00:21,588 - INFO -   Train Loss: 0.9915, Acc: 0.4908, F1: 0.4139
+2025-05-12 13:00:21,588 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:00:21,589 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:00:21,590 - INFO -   No improvement for 34 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:01:24,071 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:01:24,074 - INFO - Epoch 36/200:
+2025-05-12 13:01:24,074 - INFO -   Train Loss: 0.9977, Acc: 0.5122, F1: 0.4385
+2025-05-12 13:01:24,074 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:01:24,075 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:01:24,075 - INFO -   No improvement for 35 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:02:26,334 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:02:26,345 - INFO - Epoch 37/200:
+2025-05-12 13:02:26,345 - INFO -   Train Loss: 1.0103, Acc: 0.5000, F1: 0.4287
+2025-05-12 13:02:26,346 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:02:26,346 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:02:26,347 - INFO -   No improvement for 36 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:03:28,046 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:03:28,052 - INFO - Epoch 38/200:
+2025-05-12 13:03:28,052 - INFO -   Train Loss: 0.9945, Acc: 0.5046, F1: 0.4260
+2025-05-12 13:03:28,052 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:03:28,053 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:03:28,053 - INFO -   No improvement for 37 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:04:29,581 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:04:29,585 - INFO - Epoch 39/200:
+2025-05-12 13:04:29,585 - INFO -   Train Loss: 1.0160, Acc: 0.4908, F1: 0.4168
+2025-05-12 13:04:29,585 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:04:29,586 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:04:29,586 - INFO -   No improvement for 38 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:05:31,390 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:05:31,394 - INFO - Epoch 40/200:
+2025-05-12 13:05:31,394 - INFO -   Train Loss: 0.9955, Acc: 0.4878, F1: 0.4148
+2025-05-12 13:05:31,395 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:05:31,395 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:05:31,396 - INFO -   No improvement for 39 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:06:33,143 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:06:33,145 - INFO - Epoch 41/200:
+2025-05-12 13:06:33,146 - INFO -   Train Loss: 1.0103, Acc: 0.4908, F1: 0.4108
+2025-05-12 13:06:33,146 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:06:33,146 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:06:33,147 - INFO -   No improvement for 40 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:07:35,655 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:07:35,658 - INFO - Epoch 42/200:
+2025-05-12 13:07:35,658 - INFO -   Train Loss: 0.9991, Acc: 0.5076, F1: 0.4280
+2025-05-12 13:07:35,658 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:07:35,658 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:07:35,659 - INFO -   No improvement for 41 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:08:38,859 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:08:38,861 - INFO - Epoch 43/200:
+2025-05-12 13:08:38,861 - INFO -   Train Loss: 0.9981, Acc: 0.5046, F1: 0.4290
+2025-05-12 13:08:38,861 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:08:38,862 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:08:38,862 - INFO -   No improvement for 42 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:09:40,614 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:09:40,616 - INFO - Epoch 44/200:
+2025-05-12 13:09:40,616 - INFO -   Train Loss: 0.9899, Acc: 0.4969, F1: 0.4179
+2025-05-12 13:09:40,616 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:09:40,617 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:09:40,618 - INFO -   No improvement for 43 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:10:43,372 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:10:43,374 - INFO - Epoch 45/200:
+2025-05-12 13:10:43,374 - INFO -   Train Loss: 0.9940, Acc: 0.5168, F1: 0.4526
+2025-05-12 13:10:43,374 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:10:43,375 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:10:43,375 - INFO -   No improvement for 44 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:12:32,185 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:12:32,201 - INFO - Epoch 46/200:
+2025-05-12 13:12:32,202 - INFO -   Train Loss: 0.9982, Acc: 0.4771, F1: 0.4090
+2025-05-12 13:12:32,202 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:12:32,202 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:12:32,203 - INFO -   No improvement for 45 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:13:33,825 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:13:33,826 - INFO - Epoch 47/200:
+2025-05-12 13:13:33,826 - INFO -   Train Loss: 1.0068, Acc: 0.5168, F1: 0.4416
+2025-05-12 13:13:33,826 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:13:33,827 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:13:33,827 - INFO -   No improvement for 46 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:14:35,506 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:14:35,511 - INFO - Epoch 48/200:
+2025-05-12 13:14:35,511 - INFO -   Train Loss: 0.9962, Acc: 0.4924, F1: 0.4193
+2025-05-12 13:14:35,511 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:14:35,512 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:14:35,513 - INFO -   No improvement for 47 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:15:37,125 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:15:37,126 - INFO - Epoch 49/200:
+2025-05-12 13:15:37,126 - INFO -   Train Loss: 1.0011, Acc: 0.5260, F1: 0.4522
+2025-05-12 13:15:37,126 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:15:37,127 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:15:37,127 - INFO -   No improvement for 48 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:16:38,812 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:16:38,814 - INFO - Epoch 50/200:
+2025-05-12 13:16:38,814 - INFO -   Train Loss: 1.0005, Acc: 0.4878, F1: 0.3993
+2025-05-12 13:16:38,814 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:16:38,815 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:16:38,815 - INFO -   No improvement for 49 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:17:40,381 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:17:40,381 - INFO - Epoch 51/200:
+2025-05-12 13:17:40,394 - INFO -   Train Loss: 1.0015, Acc: 0.5199, F1: 0.4422
+2025-05-12 13:17:40,394 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:17:40,394 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:17:40,395 - INFO -   No improvement for 50 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:18:41,984 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:18:41,991 - INFO - Epoch 52/200:
+2025-05-12 13:18:41,991 - INFO -   Train Loss: 1.0047, Acc: 0.4786, F1: 0.3935
+2025-05-12 13:18:41,991 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:18:41,992 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:18:41,992 - INFO -   No improvement for 51 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:19:43,597 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:19:43,602 - INFO - Epoch 53/200:
+2025-05-12 13:19:43,603 - INFO -   Train Loss: 1.0270, Acc: 0.4954, F1: 0.4184
+2025-05-12 13:19:43,603 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:19:43,603 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:19:43,604 - INFO -   No improvement for 52 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:20:45,195 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:20:45,197 - INFO - Epoch 54/200:
+2025-05-12 13:20:45,197 - INFO -   Train Loss: 1.0101, Acc: 0.4740, F1: 0.3937
+2025-05-12 13:20:45,197 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:20:45,198 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:20:45,198 - INFO -   No improvement for 53 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:21:46,769 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:21:46,771 - INFO - Epoch 55/200:
+2025-05-12 13:21:46,771 - INFO -   Train Loss: 1.0171, Acc: 0.4878, F1: 0.3993
+2025-05-12 13:21:46,771 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:21:46,772 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:21:46,773 - INFO -   No improvement for 54 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:22:49,022 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:22:49,034 - INFO - Epoch 56/200:
+2025-05-12 13:22:49,035 - INFO -   Train Loss: 0.9947, Acc: 0.5153, F1: 0.4448
+2025-05-12 13:22:49,035 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:22:49,035 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:22:49,036 - INFO -   No improvement for 55 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:23:51,685 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:23:51,686 - INFO - Epoch 57/200:
+2025-05-12 13:23:51,686 - INFO -   Train Loss: 1.0034, Acc: 0.4801, F1: 0.4008
+2025-05-12 13:23:51,686 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:23:51,687 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:23:51,687 - INFO -   No improvement for 56 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:24:53,373 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:24:53,374 - INFO - Epoch 58/200:
+2025-05-12 13:24:53,375 - INFO -   Train Loss: 1.0015, Acc: 0.4908, F1: 0.4108
+2025-05-12 13:24:53,375 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:24:53,375 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:24:53,376 - INFO -   No improvement for 57 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:25:55,654 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:25:55,654 - INFO - Epoch 59/200:
+2025-05-12 13:25:55,669 - INFO -   Train Loss: 1.0064, Acc: 0.4801, F1: 0.4082
+2025-05-12 13:25:55,670 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:25:55,670 - INFO -   Learning Rate: 0.000005
+2025-05-12 13:25:55,671 - INFO -   No improvement for 58 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:26:57,688 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:26:57,700 - INFO - Epoch 60/200:
+2025-05-12 13:26:57,700 - INFO -   Train Loss: 1.0129, Acc: 0.5046, F1: 0.4347
+2025-05-12 13:26:57,700 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:26:57,701 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:26:57,701 - INFO -   No improvement for 59 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:28:30,295 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:28:30,297 - INFO - Epoch 61/200:
+2025-05-12 13:28:30,297 - INFO -   Train Loss: 0.9905, Acc: 0.4771, F1: 0.4033
+2025-05-12 13:28:30,298 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:28:30,298 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:28:30,299 - INFO -   No improvement for 60 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:29:32,880 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:29:32,884 - INFO - Epoch 62/200:
+2025-05-12 13:29:32,885 - INFO -   Train Loss: 1.0104, Acc: 0.4878, F1: 0.4103
+2025-05-12 13:29:32,885 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:29:32,885 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:29:32,886 - INFO -   No improvement for 61 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:30:34,572 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:30:34,582 - INFO - Epoch 63/200:
+2025-05-12 13:30:34,583 - INFO -   Train Loss: 1.0115, Acc: 0.4832, F1: 0.4058
+2025-05-12 13:30:34,583 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:30:34,583 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:30:34,584 - INFO -   No improvement for 62 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:31:36,413 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:31:36,421 - INFO - Epoch 64/200:
+2025-05-12 13:31:36,421 - INFO -   Train Loss: 0.9859, Acc: 0.5107, F1: 0.4444
+2025-05-12 13:31:36,421 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:31:36,421 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:31:36,422 - INFO -   No improvement for 63 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:32:38,040 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:32:38,046 - INFO - Epoch 65/200:
+2025-05-12 13:32:38,046 - INFO -   Train Loss: 0.9930, Acc: 0.4878, F1: 0.4088
+2025-05-12 13:32:38,046 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:32:38,046 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:32:38,047 - INFO -   No improvement for 64 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:33:39,740 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:33:39,747 - INFO - Epoch 66/200:
+2025-05-12 13:33:39,747 - INFO -   Train Loss: 0.9914, Acc: 0.5000, F1: 0.4259
+2025-05-12 13:33:39,747 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:33:39,748 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:33:39,748 - INFO -   No improvement for 65 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:34:41,546 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:34:41,548 - INFO - Epoch 67/200:
+2025-05-12 13:34:41,548 - INFO -   Train Loss: 0.9809, Acc: 0.4878, F1: 0.4103
+2025-05-12 13:34:41,549 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:34:41,549 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:34:41,550 - INFO -   No improvement for 66 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:35:43,071 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:35:43,087 - INFO - Epoch 68/200:
+2025-05-12 13:35:43,087 - INFO -   Train Loss: 1.0113, Acc: 0.4862, F1: 0.4193
+2025-05-12 13:35:43,088 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:35:43,088 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:35:43,088 - INFO -   No improvement for 67 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:36:45,969 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:36:45,982 - INFO - Epoch 69/200:
+2025-05-12 13:36:45,982 - INFO -   Train Loss: 1.0043, Acc: 0.5046, F1: 0.4319
+2025-05-12 13:36:45,983 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:36:45,983 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:36:45,984 - INFO -   No improvement for 68 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:37:48,410 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:37:48,413 - INFO - Epoch 70/200:
+2025-05-12 13:37:48,413 - INFO -   Train Loss: 1.0276, Acc: 0.5015, F1: 0.4254
+2025-05-12 13:37:48,413 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:37:48,413 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:37:48,414 - INFO -   No improvement for 69 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:38:51,750 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:38:51,761 - INFO - Epoch 71/200:
+2025-05-12 13:38:51,762 - INFO -   Train Loss: 1.0148, Acc: 0.4878, F1: 0.4073
+2025-05-12 13:38:51,762 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:38:51,762 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:38:51,763 - INFO -   No improvement for 70 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:39:53,794 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:39:53,801 - INFO - Epoch 72/200:
+2025-05-12 13:39:53,801 - INFO -   Train Loss: 0.9887, Acc: 0.5031, F1: 0.4308
+2025-05-12 13:39:53,801 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:39:53,802 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:39:53,802 - INFO -   No improvement for 71 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:40:56,553 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:40:56,555 - INFO - Epoch 73/200:
+2025-05-12 13:40:56,555 - INFO -   Train Loss: 1.0298, Acc: 0.5031, F1: 0.4336
+2025-05-12 13:40:56,556 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:40:56,556 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:40:56,557 - INFO -   No improvement for 72 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:41:58,634 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:41:58,636 - INFO - Epoch 74/200:
+2025-05-12 13:41:58,636 - INFO -   Train Loss: 1.0185, Acc: 0.4740, F1: 0.3983
+2025-05-12 13:41:58,637 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:41:58,637 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:41:58,637 - INFO -   No improvement for 73 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:43:02,622 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:43:02,626 - INFO - Epoch 75/200:
+2025-05-12 13:43:02,627 - INFO -   Train Loss: 0.9949, Acc: 0.4985, F1: 0.4291
+2025-05-12 13:43:02,627 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:43:02,627 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:43:02,628 - INFO -   No improvement for 74 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:44:04,735 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:44:04,743 - INFO - Epoch 76/200:
+2025-05-12 13:44:04,744 - INFO -   Train Loss: 1.0054, Acc: 0.4878, F1: 0.4118
+2025-05-12 13:44:04,744 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:44:04,745 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:44:04,745 - INFO -   No improvement for 75 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:45:06,862 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:45:06,864 - INFO - Epoch 77/200:
+2025-05-12 13:45:06,865 - INFO -   Train Loss: 1.0091, Acc: 0.4985, F1: 0.4291
+2025-05-12 13:45:06,865 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:45:06,865 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:45:06,866 - INFO -   No improvement for 76 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:46:08,604 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:46:08,607 - INFO - Epoch 78/200:
+2025-05-12 13:46:08,608 - INFO -   Train Loss: 1.0049, Acc: 0.4725, F1: 0.3943
+2025-05-12 13:46:08,608 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:46:08,608 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:46:08,609 - INFO -   No improvement for 77 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:47:11,320 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:47:11,335 - INFO - Epoch 79/200:
+2025-05-12 13:47:11,336 - INFO -   Train Loss: 1.0034, Acc: 0.4801, F1: 0.4138
+2025-05-12 13:47:11,336 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:47:11,336 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:47:11,337 - INFO -   No improvement for 78 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:48:12,920 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:48:12,931 - INFO - Epoch 80/200:
+2025-05-12 13:48:12,931 - INFO -   Train Loss: 0.9983, Acc: 0.5107, F1: 0.4444
+2025-05-12 13:48:12,931 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:48:12,932 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:48:12,932 - INFO -   No improvement for 79 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:49:14,614 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:49:14,617 - INFO - Epoch 81/200:
+2025-05-12 13:49:14,617 - INFO -   Train Loss: 1.0215, Acc: 0.4878, F1: 0.4088
+2025-05-12 13:49:14,618 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:49:14,618 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:49:14,619 - INFO -   No improvement for 80 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:50:16,172 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:50:16,175 - INFO - Epoch 82/200:
+2025-05-12 13:50:16,175 - INFO -   Train Loss: 0.9934, Acc: 0.4862, F1: 0.4093
+2025-05-12 13:50:16,176 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:50:16,176 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:50:16,176 - INFO -   No improvement for 81 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:51:17,764 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:51:17,764 - INFO - Epoch 83/200:
+2025-05-12 13:51:17,769 - INFO -   Train Loss: 0.9915, Acc: 0.5046, F1: 0.4260
+2025-05-12 13:51:17,769 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:51:17,769 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:51:17,770 - INFO -   No improvement for 82 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:52:19,232 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:52:19,246 - INFO - Epoch 84/200:
+2025-05-12 13:52:19,246 - INFO -   Train Loss: 1.0065, Acc: 0.5000, F1: 0.4315
+2025-05-12 13:52:19,246 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:52:19,246 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:52:19,247 - INFO -   No improvement for 83 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:53:22,013 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:53:22,020 - INFO - Epoch 85/200:
+2025-05-12 13:53:22,021 - INFO -   Train Loss: 1.0000, Acc: 0.5107, F1: 0.4346
+2025-05-12 13:53:22,021 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:53:22,021 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:53:22,022 - INFO -   No improvement for 84 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:54:24,958 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:54:24,959 - INFO - Epoch 86/200:
+2025-05-12 13:54:24,960 - INFO -   Train Loss: 0.9938, Acc: 0.4862, F1: 0.4016
+2025-05-12 13:54:24,960 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:54:24,960 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:54:24,961 - INFO -   No improvement for 85 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:55:27,388 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:55:27,397 - INFO - Epoch 87/200:
+2025-05-12 13:55:27,397 - INFO -   Train Loss: 0.9962, Acc: 0.5107, F1: 0.4430
+2025-05-12 13:55:27,398 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:55:27,398 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:55:27,399 - INFO -   No improvement for 86 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:56:29,675 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:56:29,675 - INFO - Epoch 88/200:
+2025-05-12 13:56:29,676 - INFO -   Train Loss: 0.9995, Acc: 0.4939, F1: 0.4174
+2025-05-12 13:56:29,677 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:56:29,677 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:56:29,678 - INFO -   No improvement for 87 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:57:31,892 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:57:31,901 - INFO - Epoch 89/200:
+2025-05-12 13:57:31,901 - INFO -   Train Loss: 1.0151, Acc: 0.4755, F1: 0.3962
+2025-05-12 13:57:31,902 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:57:31,902 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:57:31,903 - INFO -   No improvement for 88 epochs (best: 0.5414 at epoch 1)
+2025-05-12 13:58:34,468 - INFO - Prediction distribution: {0: 133}
+2025-05-12 13:58:34,472 - INFO - Epoch 90/200:
+2025-05-12 13:58:34,472 - INFO -   Train Loss: 1.0084, Acc: 0.4847, F1: 0.4068
+2025-05-12 13:58:34,473 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 13:58:34,473 - INFO -   Learning Rate: 0.000004
+2025-05-12 13:58:34,473 - INFO -   No improvement for 89 epochs (best: 0.5414 at epoch 1)
+2025-05-12 14:00:27,412 - INFO - Prediction distribution: {0: 133}
+2025-05-12 14:00:27,416 - INFO - Epoch 91/200:
+2025-05-12 14:00:27,416 - INFO -   Train Loss: 0.9946, Acc: 0.4939, F1: 0.4232
+2025-05-12 14:00:27,417 - INFO -   Val Loss: 0.6859, Acc: 0.5414, F1: 0.3512
+2025-05-12 14:00:27,417 - INFO -   Learning Rate: 0.000004
+2025-05-12 14:00:27,418 - INFO -   No improvement for 90 epochs (best: 0.5414 at epoch 1)
+2025-05-12 14:00:27,418 - INFO - Early stopping triggered after 91 epochs
+2025-05-12 14:01:02,199 - INFO - Loading best model for testing...
+2025-05-12 14:01:43,907 - INFO - Prediction distribution: {0: 173}
+2025-05-12 14:01:43,910 - INFO - Test Results:
+2025-05-12 14:01:43,910 - INFO -   Loss: 0.7655
+2025-05-12 14:01:43,911 - INFO -   Accuracy: 0.4798
+2025-05-12 14:01:43,912 - INFO -   F1 Score: 0.3242
+2025-05-12 14:01:43,912 - INFO -   Confusion Matrix:
+[[83  0]
+ [90  0]]

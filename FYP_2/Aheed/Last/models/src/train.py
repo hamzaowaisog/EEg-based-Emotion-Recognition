@@ -10,8 +10,10 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 import wandb
 import random
+import math
+from datetime import datetime
 
-from dataset import DEAPDataset
+from enhanced_dataset import EnhancedDEAPDataset
 from model import EmotionClassifier
 from losses import HybridLoss
 
@@ -65,16 +67,38 @@ def plot_training_history(history, output_dir):
     plt.savefig(os.path.join(plots_dir, 'metrics.png'))
     plt.close()
 
+class WarmupCosineScheduler:
+    """Learning rate scheduler with warmup and cosine decay"""
+    def __init__(self, optimizer, warmup_epochs, total_epochs, min_lr=1e-6):
+        self.optimizer = optimizer
+        self.warmup_epochs = warmup_epochs
+        self.total_epochs = total_epochs
+        self.min_lr = min_lr
+        self.base_lr = optimizer.param_groups[0]['lr']
+        
+    def step(self, epoch):
+        if epoch < self.warmup_epochs:
+            # Linear warmup
+            lr = self.base_lr * (epoch + 1) / self.warmup_epochs
+        else:
+            # Cosine decay
+            progress = (epoch - self.warmup_epochs) / (self.total_epochs - self.warmup_epochs)
+            lr = self.min_lr + 0.5 * (self.base_lr - self.min_lr) * (1 + math.cos(math.pi * progress))
+        
+        for param_group in self.optimizer.param_groups:
+            param_group['lr'] = lr
+        return lr
+
 def train(
     model, 
     optimizer, 
     train_dataset, 
     device="cuda", 
-    epochs=100, 
+    epochs=400, 
     val_dataset=None,
     output_dir="./outputs",
     batch_size=64,
-    early_stopping_patience=10,
+    early_stopping_patience=100,
     scheduler=None,
     alpha=0.3,
     beta=0.3,
@@ -220,10 +244,7 @@ def train(
         
         # Step the learning rate scheduler if provided
         if scheduler:
-            if isinstance(scheduler, torch.optim.lr_scheduler.ReduceLROnPlateau):
-                scheduler.step(val_loss)
-            else:
-                scheduler.step()
+            scheduler.step(epoch)
             logger.info(f"Learning rate: {optimizer.param_groups[0]['lr']:.6f}")
     
     # Plot and save training history
@@ -291,12 +312,14 @@ def main():
         'batch_size': 64,
         'learning_rate': 1e-4,
         'weight_decay': 1e-5,
-        'epochs': 100,
-        'early_stopping_patience': 10,
-        'alpha': 0.3,  # HybridLoss parameter
-        'beta': 0.3,   # HybridLoss parameter
+        'epochs': 400,
+        'early_stopping_patience': 150,
+        'alpha': 0.1,
+        'beta': 0.1,
+        'warmup_epochs': 10,
+        'min_lr': 1e-6,
         'output_dir': './outputs/run_' + datetime.now().strftime("%Y%m%d_%H%M%S"),
-        'use_wandb': True,  # Set to True to use wandb logging
+        'use_wandb': True,
     }
     
     # Setup device
@@ -312,17 +335,24 @@ def main():
         weight_decay=config['weight_decay']
     )
     
-    # Learning rate scheduler
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, 
-        mode='min',
-        factor=0.5, 
-        patience=5, 
-        verbose=True
+    # Initialize learning rate scheduler with warmup and cosine decay
+    scheduler = WarmupCosineScheduler(
+        optimizer,
+        warmup_epochs=config['warmup_epochs'],
+        total_epochs=config['epochs'],
+        min_lr=config['min_lr']
     )
     
-    # Load datasets
-    full_dataset = DEAPDataset(processed_dir=r"C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\processed")
+    # Load datasets with class balancing
+    full_dataset = EnhancedDEAPDataset(
+        processed_dir=r"C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\processed",
+        target='valence',
+        apply_augmentation=True,
+        balance_classes=True,
+        balance_method='smote',
+        balance_subjects=True,
+        cache_features=True
+    )
     
     # Split train/val/test (70/15/15)
     dataset_size = len(full_dataset)
@@ -333,10 +363,10 @@ def main():
     train_set, val_set, test_set = torch.utils.data.random_split(
         full_dataset, 
         [train_size, val_size, test_size],
-        generator=torch.Generator().manual_seed(42)  # Fixed seed for reproducibility
+        generator=torch.Generator().manual_seed(42)
     )
     
-    # Run training
+    # Run training with modified parameters
     trained_model, history = train(
         model=model,
         optimizer=optimizer,
@@ -374,5 +404,4 @@ def main():
         f.write(f"Test Confusion Matrix:\n{test_conf_matrix}\n")
 
 if __name__ == "__main__":
-    from datetime import datetime
     main()

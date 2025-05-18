@@ -118,3 +118,9 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+FYP_1/Quantum_Approach/__pycache__/clisa_def.cpython-311.pyc
+FYP_1/Quantum_Approach/__pycache__/deap_model_def.cpython-311.pyc
+FYP_1/Quantum_Approach/__pycache__/model_def.cpython-311.pyc
+FYP_1/Version 1/pretrained_encoder.pth
+FYP_1/Version 1/pretrained_projector.pth
+FYP_1/Version 1/pretraining_checkpoint.pth

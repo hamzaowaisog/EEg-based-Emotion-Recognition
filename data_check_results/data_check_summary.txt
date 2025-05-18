@@ -1,0 +1,21 @@
+# DEAP Processed Data Check Summary
+
+Total trials: 1280
+Valid EEG data: 1280/1280 (100.0%)
+Valid face data: 874/1280 (68.3%)
+Valid metadata: 1280/1280 (100.0%)
+
+## Class Distribution
+
+Valence - Negative (0): 556, Positive (1): 724
+Arousal - Low (0): 526, High (1): 754
+
+## Common Issues
+
+### EEG Issues
+
+### Face Issues
+- File missing: 400 trials
+- All zeros (no face detected): 6 trials
+
+### Metadata Issues

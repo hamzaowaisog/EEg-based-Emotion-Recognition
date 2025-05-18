@@ -1,0 +1,318 @@
+2025-05-02 01:07:03,288 - INFO - Early stopping triggered after 21 epochs
+wandb:
+wandb:                                                                                               
+wandb: Run history:                                                                                  
+wandb:         lr ██▇▇▆▄▃▂▂▁████▇▇▇▆▆▅▄                                                              
+wandb: train_loss █▅▄▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁
+wandb:    val_acc ▇▆▅▆▃▆▆▇▆▇█▄▄▅▅▁▅▆▄▅▄
+wandb:     val_f1 ▅▂▅▇▅▇▇█▇██▁▁▁▂▆▁▃▁▁▁
+wandb:   val_loss █▅▄▃▃▃▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁
+wandb:
+wandb: Run summary:
+wandb:         lr 2e-05
+wandb: train_loss -4.89719
+wandb:    val_acc 0.47449
+wandb:     val_f1 0.3218
+wandb:   val_loss -5.52243
+wandb:
+wandb:  View run driven-galaxy-11 at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification/runs/j6c9er3q
+wandb:  View project at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20250502_005900-j6c9er3q\logs
+2025-05-02 01:07:05,282 - INFO - Training completed. Best validation accuracy: 0.5102 at epoch 11    
+C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\models\src\train.py:280: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(best_model_path)
+2025-05-02 01:07:16,337 - INFO - Test Results | Loss: 0.1290 | Acc: 0.4646 | F1: 0.4250
+2025-05-02 01:07:16,337 - INFO - Test Confusion Matrix:
+[[72 18]
+ [88 20]]
+
+
+Run 3
+
+Epoch 59/150: 100%|█████████████████████████████████████████████████| 29/29 [00:11<00:00,  2.50it/s] 
+2025-05-02 01:34:07,009 - INFO - Epoch 59 | Train Loss: -5.7670
+2025-05-02 01:34:17,657 - INFO - Validation | Loss: -5.9809 | Acc: 0.5408 | F1: 0.5060
+2025-05-02 01:34:17,662 - INFO - Confusion Matrix:
+[[27 66]
+ [24 79]]
+2025-05-02 01:34:17,663 - INFO - Learning rate: 0.000006
+Epoch 60/150: 100%|█████████████████████████████████████████████████| 29/29 [00:11<00:00,  2.54it/s] 
+2025-05-02 01:34:29,269 - INFO - Epoch 60 | Train Loss: -5.7705
+2025-05-02 01:34:39,948 - INFO - Validation | Loss: -5.9823 | Acc: 0.5306 | F1: 0.5123
+2025-05-02 01:34:39,949 - INFO - Confusion Matrix:
+[[33 60]
+ [32 71]]
+2025-05-02 01:34:40,044 - INFO - Learning rate: 0.000005
+Epoch 61/150: 100%|█████████████████████████████████████████████████| 29/29 [00:11<00:00,  2.55it/s]
+2025-05-02 01:34:51,560 - INFO - Epoch 61 | Train Loss: -5.7780
+2025-05-02 01:35:02,373 - INFO - Validation | Loss: -5.9833 | Acc: 0.5357 | F1: 0.4960
+2025-05-02 01:35:02,376 - INFO - Confusion Matrix:
+[[25 68]
+ [23 80]]
+2025-05-02 01:35:02,377 - INFO - Early stopping triggered after 61 epochs
+wandb:
+wandb:
+wandb: Run history:
+wandb:         lr ██▇▇▆▂████▇▇▆▆▅▄▃▃▂▂▁▁▁████▇▇▇▆▅▅▄▄▃▃▃▂▂
+wandb: train_loss █▅▄▄▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:    val_acc ▄▃▃▁▃▄▄▁▂▂▃▂▁█████████▄▄▅█▅▆▆▇▅▃▄▅▃▆▆▆▇▇
+wandb:     val_f1 ▄▄▅▄▆▆▆▆▁▁▂▄▁▁▁████████▆▇█▇▇▂▂▅▅▅▆▆▆▇▅▆▆
+wandb:   val_loss █▅▄▄▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:
+wandb: Run summary:
+wandb:         lr 1e-05
+wandb: train_loss -5.77802
+wandb:    val_acc 0.53571
+wandb:     val_f1 0.49603
+wandb:   val_loss -5.9833
+wandb:
+wandb:  View run super-mountain-12 at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification/runs/m965nwm5
+wandb:  View project at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20250502_011217-m965nwm5\logs
+2025-05-02 01:35:05,073 - INFO - Training completed. Best validation accuracy: 0.5561 at epoch 31    
+C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\models\src\train.py:280: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(best_model_path)
+2025-05-02 01:35:15,990 - INFO - Test Results | Loss: 0.0595 | Acc: 0.5505 | F1: 0.5472
+2025-05-02 01:35:15,990 - INFO - Test Confusion Matrix:
+[[63 27]
+ [62 46]]
+
+
+ Run 4
+
+Epoch 35/150: 100%|█████████████████████████████████████████████████| 29/29 [00:11<00:00,  2.42it/s] 
+2025-05-02 11:19:26,980 - INFO - Epoch 35 | Train Loss: 2.0154
+2025-05-02 11:19:37,699 - INFO - Validation | Loss: 1.9184 | Acc: 0.5153 | F1: 0.5152
+2025-05-02 11:19:37,715 - INFO - Confusion Matrix:
+[[52 41]
+ [54 49]]
+2025-05-02 11:19:37,715 - INFO - Learning rate: 0.000030
+Epoch 36/150: 100%|█████████████████████████████████████████████████| 29/29 [00:11<00:00,  2.52it/s] 
+2025-05-02 11:19:49,349 - INFO - Epoch 36 | Train Loss: 2.0189
+2025-05-02 11:20:00,512 - INFO - Validation | Loss: 1.9189 | Acc: 0.5255 | F1: 0.5252
+2025-05-02 11:20:00,514 - INFO - Confusion Matrix:
+[[49 44]
+ [49 54]]
+2025-05-02 11:20:00,514 - INFO - Early stopping triggered after 36 epochs
+wandb:
+wandb:                                                                                               
+wandb: Run history:                                                                                  
+wandb:         lr ▁▂▂▃▄▅▅▆▇▇██████████████████████████                                               
+wandb: train_loss █▇██▇▆▆▆▅▅▅▄▃▄▃▃▃▃▃▂▃▂▂▃▂▂▂▂▂▂▂▁▁▂▁▂
+wandb:    val_acc ▁▃▃▃▄█▆▅▆▅▆▆▆▅▅▄▆▅▆▆▆▄▆▅▅▃█▃▄▄▅▃▇▇▆▆
+wandb:     val_f1 ▁▃▂▄▄█▆▅▆▅▅▅▆▅▅▄▆▅▆▆▆▄▅▅▅▄█▃▄▄▅▄▇▇▆▆
+wandb:   val_loss █▆▅▅▅▄▄▄▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁
+wandb:
+wandb: Run summary:
+wandb:         lr 3e-05
+wandb: train_loss 2.01887
+wandb:    val_acc 0.52551
+wandb:     val_f1 0.5252
+wandb:   val_loss 1.91888
+wandb:
+wandb:  View run deft-durian-13 at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification/runs/gl55cvmi
+wandb:  View project at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20250502_110625-gl55cvmi\logs
+2025-05-02 11:20:03,428 - INFO - Training completed. Best validation accuracy: 0.5459 at epoch 6     
+C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\models\src\train.py:281: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(best_model_path)
+2025-05-02 11:20:15,324 - INFO - Test Results | Loss: 1.6573 | Acc: 0.5556 | F1: 0.5551
+2025-05-02 11:20:15,325 - INFO - Test Confusion Matrix:
+[[58 32]
+ [56 52]]
+
+ Run 5
+
+ 2025-05-03 18:40:19,776 - INFO - Learning rate: 0.000030
+Epoch 33/150: 100%|██████████████████████████████████████████████████| 31/31 [00:11<00:00,  2.70it/s] 
+2025-05-03 18:40:31,356 - INFO - Epoch 33 | Train Loss: 1.5693
+2025-05-03 18:40:41,936 - INFO - Validation | Loss: 1.3563 | Acc: 0.4809 | F1: 0.4794
+2025-05-03 18:40:41,937 - INFO - Confusion Matrix:
+[[35 27]
+ [41 28]]
+2025-05-03 18:40:41,937 - INFO - Learning rate: 0.000030
+Epoch 34/150: 100%|██████████████████████████████████████████████████| 31/31 [00:11<00:00,  2.67it/s] 
+2025-05-03 18:40:53,657 - INFO - Epoch 34 | Train Loss: 1.6060
+2025-05-03 18:41:04,347 - INFO - Validation | Loss: 1.4017 | Acc: 0.4427 | F1: 0.4426
+2025-05-03 18:41:04,348 - INFO - Confusion Matrix:
+[[30 32]
+ [41 28]]
+2025-05-03 18:41:04,349 - INFO - Learning rate: 0.000030
+Epoch 35/150: 100%|██████████████████████████████████████████████████| 31/31 [00:11<00:00,  2.68it/s] 
+2025-05-03 18:41:16,054 - INFO - Epoch 35 | Train Loss: 1.5675
+2025-05-03 18:41:26,621 - INFO - Validation | Loss: 1.4183 | Acc: 0.4733 | F1: 0.4733
+2025-05-03 18:41:26,622 - INFO - Confusion Matrix:
+[[31 31]
+ [38 31]]
+2025-05-03 18:41:26,623 - INFO - Learning rate: 0.000030
+Epoch 36/150: 100%|██████████████████████████████████████████████████| 31/31 [00:11<00:00,  2.71it/s] 
+2025-05-03 18:41:38,198 - INFO - Epoch 36 | Train Loss: 1.5675
+2025-05-03 18:41:48,835 - INFO - Validation | Loss: 1.3944 | Acc: 0.4504 | F1: 0.4501
+2025-05-03 18:41:48,836 - INFO - Confusion Matrix:
+[[31 31]
+ [41 28]]
+2025-05-03 18:41:48,837 - INFO - Learning rate: 0.000030
+Epoch 37/150: 100%|██████████████████████████████████████████████████| 31/31 [00:11<00:00,  2.69it/s] 
+2025-05-03 18:42:00,476 - INFO - Epoch 37 | Train Loss: 1.5617
+2025-05-03 18:42:11,200 - INFO - Validation | Loss: 1.4081 | Acc: 0.4504 | F1: 0.4488
+2025-05-03 18:42:11,201 - INFO - Confusion Matrix:
+[[33 29]
+ [43 26]]
+2025-05-03 18:42:11,202 - INFO - Learning rate: 0.000030
+Epoch 38/150: 100%|██████████████████████████████████████████████████| 31/31 [00:11<00:00,  2.70it/s] 
+2025-05-03 18:42:22,813 - INFO - Epoch 38 | Train Loss: 1.5465
+2025-05-03 18:42:33,406 - INFO - Validation | Loss: 1.3720 | Acc: 0.4733 | F1: 0.4732
+2025-05-03 18:42:33,407 - INFO - Confusion Matrix:
+[[32 30]
+ [39 30]]
+2025-05-03 18:42:33,407 - INFO - Early stopping triggered after 38 epochs
+wandb:
+wandb:                                                                                                
+wandb: Run history:                                                                                   
+wandb:         lr ▁▂▂▃▄▅▅▆▇▇████████████████████████████                                              
+wandb: train_loss █▇▇▆▆▆▅▅▅▄▄▄▄▄▄▂▃▃▂▃▂▂▂▃▂▃▂▂▁▂▂▂▂▂▁▁▁▁
+wandb:    val_acc ▄▆▆▇▆▇▆█▇▃▆▃▄▄▃▅▁▂▂▃▂▃▃▂▁▁▁▃▃▃▃▃▃▁▃▂▂▃
+wandb:     val_f1 ▄▅▅▇▆▇▆█▇▃▅▃▄▄▂▅▂▂▂▃▂▃▃▂▁▁▁▃▃▂▃▃▃▂▃▂▂▃
+wandb:   val_loss ██▇▆▆▆▅▃▆▅▅▄▂▄▃▂▃▅▃▃▂▃▄▄▂▃▃▁▃▂▁▂▂▃▃▂▃▂
+wandb:
+wandb: Run summary:
+wandb:         lr 3e-05
+wandb: train_loss 1.54653
+wandb:    val_acc 0.47328
+wandb:     val_f1 0.47316
+wandb:   val_loss 1.37205
+wandb:
+wandb:  View run stoic-night-18 at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification/runs/rif79ddm
+wandb:  View project at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20250503_182821-rif79ddm\logs
+2025-05-03 18:42:35,960 - INFO - Training completed. Best validation accuracy: 0.6107 at epoch 8      
+C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\models\src\train.py:283: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(best_model_path)
+2025-05-03 18:42:46,791 - INFO - Test Results | Loss: 1.2243 | Acc: 0.5431 | F1: 0.5429
+2025-05-03 18:42:46,791 - INFO - Test Confusion Matrix:
+[[51 39]
+ [51 56]]
+
+ Run 6
+
+ Epoch 42/200:  89%|████████████████████████████████████████████▎     | 55/62 [00:11<00:00, 27.59it/s]Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Epoch 42/200: 100%|██████████████████████████████████████████████████| 62/62 [00:12<00:00,  4.93it/s]
+2025-05-03 19:45:59,471 - INFO - Epoch 42 | Train Loss: 1.5290
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+2025-05-03 19:46:10,226 - INFO - Validation | Loss: 1.2580 | Acc: 0.4885 | F1: 0.4561
+2025-05-03 19:46:10,227 - INFO - Confusion Matrix:
+[[16 46]
+ [21 48]]
+2025-05-03 19:46:10,227 - INFO - Early stopping triggered after 42 epochs
+wandb:
+wandb:                                                                                                
+wandb: Run history:                                                                                   
+wandb:         lr ▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂▂▂▂▂▃▃▃▃▄▄▄▄▄▅▅▅▅▆▆▆▆▇▇▇█                                            
+wandb: train_loss ▄▆▇▇▆▃▄▃▄▆▃▄▃▆▄▇▅▃▃▅▂▂▇▅▆▄▄▁█▃▇▆▃▄▁▂▅▅▃▆
+wandb:    val_acc ▆█▄▄▆▄▅▇▅▄▆▆▆▄▃▆▃▇▅▆▄▇▃▃▅▆▅█▆▄▃█▄▅▁▃▅▆▅▂
+wandb:     val_f1 ▆█▄▄▆▄▄▆▅▄▅▆▅▄▃▆▄▇▅▆▄▇▃▃▄▅▄▇▅▄▂▇▃▃▁▄▅▆▄▁
+wandb:   val_loss ▇▅▇▆▆▆▇▅▅▁▇█▅▆▅▂▆▅▆█▆▅▇▅▅▇▃▅▄▄▆▄▃▃▆▅▃▃▆▇
+wandb:
+wandb: Run summary:
+wandb:         lr 3e-05
+wandb: train_loss 1.52897
+wandb:    val_acc 0.48855
+wandb:     val_f1 0.45609
+wandb:   val_loss 1.25804
+wandb:
+wandb:  View run morning-violet-19 at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification/runs/jhzev2lb
+wandb:  View project at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20250503_192942-jhzev2lb\logs
+2025-05-03 19:46:12,100 - INFO - Training completed. Best validation accuracy: 0.6031 at epoch 2      
+C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\models\src\train.py:296: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(best_model_path)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+Augmentation changed shape to (32, 32), reshaping back to (32,)
+2025-05-03 19:46:23,155 - INFO - Test Results | Loss: 1.2677 | Acc: 0.5330 | F1: 0.4935
+2025-05-03 19:46:23,156 - INFO - Test Confusion Matrix:
+[[25 65]
+ [27 80]]
+
+
+Run 6
+Epoch 347/400: 100%|██████████████████████████████████████████████| 15/15 [00:24<00:00,  1.63s/it] 
+2025-05-11 20:19:42,777 - INFO - Epoch 347 | Train Loss: 1.0393
+2025-05-11 20:20:06,679 - INFO - Validation | Loss: 1.2239 | Acc: 0.6276 | F1: 0.6247
+2025-05-11 20:20:06,685 - INFO - Confusion Matrix:
+[[53 49]
+ [24 70]]
+2025-05-11 20:20:06,686 - INFO - Learning rate: 0.000006
+Epoch 348/400: 100%|██████████████████████████████████████████████| 15/15 [00:23<00:00,  1.55s/it] 
+2025-05-11 20:20:29,979 - INFO - Epoch 348 | Train Loss: 1.0161
+2025-05-11 20:20:53,612 - INFO - Validation | Loss: 1.2567 | Acc: 0.6327 | F1: 0.6302
+2025-05-11 20:20:53,614 - INFO - Confusion Matrix:
+[[54 48]
+ [24 70]]
+2025-05-11 20:20:53,615 - INFO - Early stopping triggered after 348 epochs
+wandb:
+wandb:                                                                                             
+wandb: Run history:                                                                                
+wandb:         lr ██████▇▇▇▇▆▆▆▆▆▅▅▅▅▅▄▄▄▃▃▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁                                         
+wandb: train_loss ██▇▆▅▅▅▅▅▄▃▃▃▄▃▃▃▃▂▂▂▃▃▂▁▂▂▂▂▂▂▂▂▂▂▁▁▂▁▁
+wandb:    val_acc ▁▅▅▂▄▆▆▅▆▄▅▅▅▆▆▇▇▄▄█▆▄▆▅▄▆▄▇▆▆▆▃▄▇▆▆▇▄▆▅
+wandb:     val_f1 ▂▁▂▂▁▅▅▇▆▇▆█▆▅▇█▇▆▅▆▇▆▆▆▆▆▅▆▅▆▆█▆▅▆█▄█▆▅
+wandb:   val_loss █▆▂▂▂▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▂▁▂▂▂▁▁▂▂▂▂▂▂▂▃▂▂▂▂▂
+wandb:
+wandb: Run summary:
+wandb:         lr 1e-05
+wandb: train_loss 1.01607
+wandb:    val_acc 0.63265
+wandb:     val_f1 0.63019
+wandb:   val_loss 1.25673
+wandb:
+wandb:  View run breezy-sun-21 at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification/runs/n9n4xlyb
+wandb:  View project at: https://wandb.ai/tahiralira3-fast-nuces/emotion-classification
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: .\wandb\run-20250511_155624-n9n4xlyb\logs
+2025-05-11 20:20:56,802 - INFO - Training completed. Best validation accuracy: 0.6837 at epoch 198 
+C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\models\src\train.py:263: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please  `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(best_model_path)
+open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(best_model_path)
+2025-05-11 20:21:20,718 - INFO - Test Results | Loss: 1.3632 | Acc: 0.5455 | F1: 0.5447
+  checkpoint = torch.load(best_model_path)
+2025-05-11 20:21:20,718 - INFO - Test Results | Loss: 1.3632 | Acc: 0.5455 | F1: 0.5447
+2025-05-11 20:21:20,718 - INFO - Test Results | Loss: 1.3632 | Acc: 0.5455 | F1: 0.5447
+2025-05-11 20:21:20,718 - INFO - Test Confusion Matrix:
+2025-05-11 20:21:20,718 - INFO - Test Confusion Matrix:
+[[50 60]
+ [30 58]]

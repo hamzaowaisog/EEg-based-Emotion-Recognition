@@ -1,0 +1,118 @@
+2025-05-02 11:32:51,187 - INFO - Loaded 1280 valid samples from C:\Users\tahir\Documents\EEg-based-Emotion-Recognition\FYP_2\Aheed\Last\data\processed
+2025-05-02 11:32:51,189 - INFO - Class distribution: {0: 556, 1: 724}
+2025-05-02 11:32:51,190 - INFO - Class weights: {0: 1.1510791366906474, 1: 0.8839779005524862}
+2025-05-02 11:32:52,531 - INFO - Class distribution: {0: 588, 1: 724}
+2025-05-02 11:32:52,532 - INFO - Class weights: {0: 1.1156462585034013, 1: 0.9060773480662984}
+2025-05-02 11:32:52,535 - INFO - Training with 918 samples, validating with 196 samples
+2025-05-02 11:33:10,779 - INFO - Epoch 1 | Train Loss: 0.7851
+2025-05-02 11:33:25,111 - INFO - Validation | Loss: 0.7393 | Acc: 0.5255 | F1: 0.3445
+2025-05-02 11:33:25,117 - INFO - Confusion Matrix:
+[[  0  93]
+ [  0 103]]
+2025-05-02 11:33:25,145 - INFO - Saved best model with validation accuracy: 0.5255
+2025-05-02 11:33:39,523 - INFO - Epoch 2 | Train Loss: 0.7814
+2025-05-02 11:33:54,596 - INFO - Validation | Loss: 0.7418 | Acc: 0.5153 | F1: 0.3401
+2025-05-02 11:33:54,603 - INFO - Confusion Matrix:
+[[  0  93]
+ [  2 101]]
+2025-05-02 11:34:09,787 - INFO - Epoch 3 | Train Loss: 0.7892
+2025-05-02 11:34:21,701 - INFO - Validation | Loss: 0.7447 | Acc: 0.4949 | F1: 0.3710
+2025-05-02 11:34:21,701 - INFO - Confusion Matrix:
+[[ 5 88]
+ [11 92]]
+2025-05-02 11:34:33,576 - INFO - Epoch 4 | Train Loss: 0.7687
+2025-05-02 11:34:44,987 - INFO - Validation | Loss: 0.7446 | Acc: 0.4847 | F1: 0.3653
+2025-05-02 11:34:44,988 - INFO - Confusion Matrix:
+[[ 5 88]
+ [13 90]]
+2025-05-02 11:34:56,836 - INFO - Epoch 5 | Train Loss: 0.7792
+2025-05-02 11:35:08,352 - INFO - Validation | Loss: 0.7438 | Acc: 0.4898 | F1: 0.3815
+2025-05-02 11:35:08,353 - INFO - Confusion Matrix:
+[[ 7 86]
+ [14 89]]
+2025-05-02 11:35:20,036 - INFO - Epoch 6 | Train Loss: 0.7792
+2025-05-02 11:35:31,243 - INFO - Validation | Loss: 0.7414 | Acc: 0.4898 | F1: 0.3681
+2025-05-02 11:35:31,245 - INFO - Confusion Matrix:
+[[ 5 88]
+ [12 91]]
+2025-05-02 11:35:42,891 - INFO - Epoch 7 | Train Loss: 0.7900
+2025-05-02 11:35:54,496 - INFO - Validation | Loss: 0.7438 | Acc: 0.4898 | F1: 0.3878
+2025-05-02 11:35:54,497 - INFO - Confusion Matrix:
+[[ 8 85]
+ [15 88]]
+2025-05-02 11:36:06,492 - INFO - Epoch 8 | Train Loss: 0.7918
+2025-05-02 11:36:18,003 - INFO - Validation | Loss: 0.7441 | Acc: 0.4847 | F1: 0.3721
+2025-05-02 11:36:18,015 - INFO - Confusion Matrix:
+[[ 6 87]
+ [14 89]]
+2025-05-02 11:36:29,755 - INFO - Epoch 9 | Train Loss: 0.7799
+2025-05-02 11:36:41,098 - INFO - Validation | Loss: 0.7441 | Acc: 0.4847 | F1: 0.3583
+2025-05-02 11:36:41,102 - INFO - Confusion Matrix:
+[[ 4 89]
+ [12 91]]
+2025-05-02 11:36:52,348 - INFO - Epoch 10 | Train Loss: 0.7908
+2025-05-02 11:37:03,515 - INFO - Validation | Loss: 0.7439 | Acc: 0.4745 | F1: 0.3528
+2025-05-02 11:37:03,517 - INFO - Confusion Matrix:
+[[ 4 89]
+ [14 89]]
+2025-05-02 11:37:14,812 - INFO - Epoch 11 | Train Loss: 0.7768
+2025-05-02 11:37:25,869 - INFO - Validation | Loss: 0.7432 | Acc: 0.4847 | F1: 0.3583
+2025-05-02 11:37:25,870 - INFO - Confusion Matrix:
+[[ 4 89]
+ [12 91]]
+2025-05-02 11:37:37,157 - INFO - Epoch 12 | Train Loss: 0.7867
+2025-05-02 11:37:48,096 - INFO - Validation | Loss: 0.7425 | Acc: 0.5051 | F1: 0.4032
+2025-05-02 11:37:48,097 - INFO - Confusion Matrix:
+[[ 9 84]
+ [13 90]]
+2025-05-02 11:37:59,319 - INFO - Epoch 13 | Train Loss: 0.7869
+2025-05-02 11:38:10,660 - INFO - Validation | Loss: 0.7425 | Acc: 0.4847 | F1: 0.3906
+2025-05-02 11:38:10,665 - INFO - Confusion Matrix:
+[[ 9 84]
+ [17 86]]
+2025-05-02 11:38:22,137 - INFO - Epoch 14 | Train Loss: 0.7754
+2025-05-02 11:38:33,112 - INFO - Validation | Loss: 0.7422 | Acc: 0.4898 | F1: 0.3878
+2025-05-02 11:38:33,119 - INFO - Confusion Matrix:
+[[ 8 85]
+ [15 88]]
+2025-05-02 11:38:44,371 - INFO - Epoch 15 | Train Loss: 0.7723
+2025-05-02 11:38:55,392 - INFO - Validation | Loss: 0.7416 | Acc: 0.4949 | F1: 0.3909
+2025-05-02 11:38:55,393 - INFO - Confusion Matrix:
+[[ 8 85]
+ [14 89]]
+2025-05-02 11:39:06,771 - INFO - Epoch 16 | Train Loss: 0.7757
+2025-05-02 11:39:17,799 - INFO - Validation | Loss: 0.7407 | Acc: 0.5000 | F1: 0.4000
+2025-05-02 11:39:17,802 - INFO - Confusion Matrix:
+[[ 9 84]
+ [14 89]]
+2025-05-02 11:39:29,227 - INFO - Epoch 17 | Train Loss: 0.7740
+2025-05-02 11:39:40,223 - INFO - Validation | Loss: 0.7417 | Acc: 0.4898 | F1: 0.3815
+2025-05-02 11:39:40,236 - INFO - Confusion Matrix:
+[[ 7 86]
+ [14 89]]
+2025-05-02 11:39:51,563 - INFO - Epoch 18 | Train Loss: 0.7906
+2025-05-02 11:40:02,789 - INFO - Validation | Loss: 0.7403 | Acc: 0.4898 | F1: 0.3750
+2025-05-02 11:40:02,789 - INFO - Confusion Matrix:
+[[ 6 87]
+ [13 90]]
+2025-05-02 11:40:14,037 - INFO - Epoch 19 | Train Loss: 0.7816
+2025-05-02 11:40:24,987 - INFO - Validation | Loss: 0.7401 | Acc: 0.5051 | F1: 0.4032
+2025-05-02 11:40:24,997 - INFO - Confusion Matrix:
+[[ 9 84]
+ [13 90]]
+2025-05-02 11:40:36,471 - INFO - Epoch 20 | Train Loss: 0.7828
+2025-05-02 11:40:47,512 - INFO - Validation | Loss: 0.7395 | Acc: 0.4796 | F1: 0.3817
+2025-05-02 11:40:47,514 - INFO - Confusion Matrix:
+[[ 8 85]
+ [17 86]]
+2025-05-02 11:40:59,052 - INFO - Epoch 21 | Train Loss: 0.7772
+2025-05-02 11:41:10,253 - INFO - Validation | Loss: 0.7405 | Acc: 0.4847 | F1: 0.3906
+2025-05-02 11:41:10,254 - INFO - Confusion Matrix:
+[[ 9 84]
+ [17 86]]
+2025-05-02 11:41:10,255 - INFO - Early stopping triggered after 21 epochs
+2025-05-02 11:41:12,694 - INFO - Training completed. Best validation accuracy: 0.5255 at epoch 1
+2025-05-02 11:41:24,000 - INFO - Test Results | Loss: 0.7324 | Acc: 0.5455 | F1: 0.3529
+2025-05-02 11:41:24,000 - INFO - Test Confusion Matrix:
+[[  0  90]
+ [  0 108]]
