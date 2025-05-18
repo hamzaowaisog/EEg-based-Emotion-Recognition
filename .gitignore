@@ -1,3 +1,4 @@
+# Project specific
 FYP_1/SEED.zip
 .venv
 FYP_1/SEED
@@ -53,12 +54,67 @@ FYP_2/Aheed/experiment_01/output_facial_features/Angry_Fearful_features.npy
 FYP_2/Aheed/experiment_01/output_facial_features/Calm_Content_features.npy
 FYP_2/Aheed/experiment_01/output_facial_features/Excited_Happy_features.npy
 FYP_2/Aheed/experiment_01/output_facial_features/Sad_Bored_features.npy
-.gitignore
 FYP_2/Aheed/Last/metadata_csv/online_ratings.csv
 FYP_2/Aheed/Last/metadata_csv/participant_questionnaire.csv
 FYP_2/Aheed/Last/metadata_csv/participant_ratings.csv
 FYP_2/Aheed/Last/metadata_csv/video_list.csv
-
 FYP_2/Hamza/.torcheeg
-FYP_2/Hamza/full_dataset_data.npy
-FYP_2/Hamza/full_dataset_labels.npy
+
+# Large model files and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.model
+*.bin
+*.pb
+*.onnx
+*.tflite
+*.fig
+
+# Output directories
+outputs/
+**/outputs/
+**/checkpoints/
+wandb/
+**/wandb/
+runs/
+**/runs/
+logs/
+**/logs/
+
+# Large data files
+*.npy
+*.npz
+*.csv
+*.parquet
+*.json
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python build artifacts
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
