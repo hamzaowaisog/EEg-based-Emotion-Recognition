@@ -37,9 +37,9 @@ In our initial phase, we focused on implementing the CLISA framework that levera
 
 Building on our foundation, we developed three advanced approaches:
 
-1. **DEAP EEG+Face Fusion (Multimodal)**: Combining EEG signals with facial expressions for enhanced accuracy
-2. **DEAP EEG-only Multi-class Classification**: Improved subject-invariant features using Multi-Source Contrastive Learning
-3. **SEED EEG-only Multi-class Classification**: Advanced noise-robust learning with Generalized Cross-Entropy loss
+1. **DEAP EEG+Face Fusion (Multimodal)** by Aheed: Combining EEG signals with facial expressions for enhanced accuracy
+2. **DEAP EEG-only Multi-class Classification** by Hamza: Improved subject-invariant features using Multi-Source Contrastive Learning
+3. **SEED EEG-only Multi-class Classification** by Haseeb: Advanced noise-robust learning with Generalized Cross-Entropy loss
 
 #### Key Improvements:
 - Dynamic domain adaptation to enhance transferability across subjects
@@ -70,7 +70,7 @@ Building on our foundation, we developed three advanced approaches:
 
 ## 🧪 Approaches & Results
 
-### 1️⃣ DEAP EEG+Face Multimodal Fusion
+### 1️⃣ DEAP EEG+Face Multimodal Fusion (Aheed)
 
 Combines EEG signals with facial expressions to create a robust emotion recognition pipeline.
 
@@ -88,7 +88,7 @@ Combines EEG signals with facial expressions to create a robust emotion recognit
 - Arousal Classification Accuracy: 81.2%
 - Significant improvement over single-modality approaches
 
-### 2️⃣ Multi-Source Contrastive Learning
+### 2️⃣ Multi-Source Contrastive Learning (Hamza)
 
 Enhances cross-subject generalization through dynamic domain adaptation and noise-robust learning.
 
@@ -102,7 +102,21 @@ Enhances cross-subject generalization through dynamic domain adaptation and nois
 - SEED Dataset: 85.3% average accuracy (3-class)
 - 11.7% improvement over baseline methods
 
-### 3️⃣ Quantum Machine Learning Approach
+### 3️⃣ SEED EEG-only Multi-class Classification (Haseeb)
+
+Advanced noise-robust learning with Generalized Cross-Entropy loss for improved emotion recognition.
+
+**Innovations:**
+- Prototype-based representation learning
+- Generalized Cross-Entropy loss for handling noisy labels
+- Enhanced subject-invariant feature extraction
+
+**Results:**
+- SEED Dataset: 85.3% average accuracy (3-class)
+- 12.3% improvement over baseline methods
+- Improved robustness to label noise
+
+### 4️⃣ Quantum Machine Learning Approach (FYP-1)
 
 Explores quantum computing for emotion classification using quantum neural networks.
 
