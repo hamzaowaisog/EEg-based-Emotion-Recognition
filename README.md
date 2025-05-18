@@ -75,28 +75,46 @@ Building on our foundation, we developed three advanced approaches:
 Combines EEG signals with facial expressions to create a robust emotion recognition pipeline.
 
 <div align="center">
-  <img src="tsne_comparison_report_style.png" alt="tSNE Visualization" width="600"/>
+  <img src="FYP_2/Aheed/Documentation/deaparc1.png" alt="EEG+Face Architecture" width="800"/>
+  <p><i>Architecture of the DEAP EEG+Face fusion model, showing the separate encoders, fusion mechanism, and projection heads</i></p>
 </div>
 
-**Key Components:**
-- Separate encoders for EEG and facial features
-- Fusion mechanism to combine modalities
-- Cross-modal contrastive learning to align representations
+<div align="center">
+  <img src="FYP_2/Aheed/Documentation/tsne_fused_by_emotion.png" alt="t-SNE of EEG+Face Fusion" width="400"/>
+  <p><i>t-SNE visualization of the multimodal fused representations, showing the separation of emotion classes</i></p>
+</div>
 
 **Results:**
-- Valence Classification Accuracy: 68.37% (subject-dependent), 54.55% (subject-independent)
-- Arousal Classification: Significant improvement over baseline methods
-- F1-Score: 63.02% (subject-dependent), 53.87% (subject-independent)
+- Valence Classification Accuracy: 
+  - Subject-Dependent: 68.37%
+  - Subject-Independent: 54.55%
+- F1-Score: 
+  - Subject-Dependent: 63.02%
+  - Subject-Independent: 53.87%
 - Multimodal fusion provided complementary information, improving over EEG-only approaches
 
 ### 2️⃣ Multi-Source Contrastive Learning (Hamza)
 
 Enhances cross-subject generalization through dynamic domain adaptation and noise-robust learning.
 
-**Innovations:**
-- Dynamic weighting of source subjects based on similarity to target
-- Prototype embedding learning to reduce label noise
-- Dual-stage contrastive learning framework
+<div align="center">
+  <img src="FYP_2/Aheed/Documentation/deaparc2.png" alt="DEAP EEG-only Architecture" width="800"/>
+  <p><i>Architecture of the DEAP EEG-only model with subject-specific mapper and cross-subject alignment module</i></p>
+</div>
+
+<div align="center">
+  <div style="display: flex; justify-content: center;">
+    <div style="flex: 1; text-align: center;">
+      <img src="FYP_2/Aheed/Documentation/beforedeap.png" alt="Before Subject Mapping" width="350"/>
+      <p><i>Before Subject-Specific Mapper</i></p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+      <img src="FYP_2/Aheed/Documentation/afterdeap.png" alt="After Subject Mapping" width="350"/>
+      <p><i>After Subject-Specific Mapper</i></p>
+    </div>
+  </div>
+  <p><i>t-SNE visualizations showing the improvement in class separation after applying subject-specific mapping</i></p>
+</div>
 
 **Results:**
 - DEAP Dataset: 85.4% (subject-dependent), 68.7% (subject-independent) accuracy
@@ -108,10 +126,15 @@ Enhances cross-subject generalization through dynamic domain adaptation and nois
 
 Advanced noise-robust learning with Generalized Cross-Entropy loss for improved emotion recognition.
 
-**Innovations:**
-- Prototype-based representation learning
-- Generalized Cross-Entropy loss for handling noisy labels
-- Enhanced subject-invariant feature extraction
+<div align="center">
+  <img src="FYP_2/Aheed/Documentation/seedarc1.png" alt="SEED EEG-only Architecture" width="800"/>
+  <p><i>Architecture of the SEED EEG-only model with advanced loss functions</i></p>
+</div>
+
+<div align="center">
+  <img src="FYP_2/Aheed/Documentation/afterseed.png" alt="SEED Embeddings" width="400"/>
+  <p><i>t-SNE visualization of the SEED embeddings after training with the combined Prototype Contrastive and MMD loss</i></p>
+</div>
 
 **Results:**
 - SEED Dataset: 86.48% average accuracy (3-class)
@@ -127,6 +150,49 @@ Explores quantum computing for emotion classification using quantum neural netwo
 - Quantum circuit-based feature extraction
 - Hybrid quantum-classical model architecture
 - Parameter-efficient quantum models
+
+## 🔬 Technical Innovations
+
+Our research introduced several key technical innovations:
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Approach</th>
+      <th>Key Technical Innovations</th>
+    </tr>
+    <tr>
+      <td>DEAP EEG+Face (Aheed)</td>
+      <td>
+        <ul>
+          <li>Cross-modal contrastive learning for aligning EEG and facial representations</li>
+          <li>Multimodal fusion with attention mechanism</li>
+          <li>Dynamic confidence-based weighting for each modality</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>DEAP EEG-only (Hamza)</td>
+      <td>
+        <ul>
+          <li>Subject-specific mapper with Squeeze-and-Excitation blocks</li>
+          <li>Cross-subject alignment module</li>
+          <li>Dynamic Weighted Focal Loss for addressing class imbalance</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>SEED EEG-only (Haseeb)</td>
+      <td>
+        <ul>
+          <li>Prototype Contrastive Loss for stable representation learning</li>
+          <li>Maximum Mean Discrepancy (MMD) Loss for domain adaptation</li>
+          <li>Momentum-based prototype updating mechanism</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## 🔧 Installation & Usage
 
